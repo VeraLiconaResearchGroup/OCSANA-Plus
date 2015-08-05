@@ -30,7 +30,12 @@ t._e.push(f);
 
 return t;
 }(document, "script", "twitter-wjs"));</script>
-
+<style>
+    .manifest {
+        text-align: left;
+        padding-left: 5px;
+    }      
+    </style>
   </head>
 
   <body>
@@ -52,13 +57,16 @@ return t;
             <p>In this page, we will show you how to package your algorithm to Algorun. If you have not worked with Docker before, please download our <a href="docs/porting-your-algorithm-to-algorun-platform.pdf" target="_blank">full documentation</a> to get started.<br><br>If you are familiar with Docker, the below guide is sufficient for you to start ..</p>
 <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1: Prepare your algorithm</h3>
-
+<p>Prepare your algorithm to work in the following scenario:</p>
 <ul>
-<li>Your algorithm should accept the input as a file and produce the output to another file.</li>
-    <li><p>Your algorithm should run as following:<br><code>command input_file [FLAGS] [-f output_file]</code> where:<table style="width:100%"><tr><td><code>command</code></td><td>Mandatory</td><td>The command you use through terminal to run your
-algorithm</td></tr><tr><td><code>input_file</code></td><td>Mandatory</td><td>The input_file your algorithm read and process</td></tr><tr><td><code>FLAGS</code></td><td>Optional</td><td>If you have different modes for running the algorithm, you specify them as flags</td></tr><tr><td><code>-f output_file</code></td><td>Optional</td><td>If your command allow to specify a specific output file as
-a parameter, it should be in this format. If not, your algorithm should still write the output to a file (you will
-specify its name in the next step)</td></tr></table></p></li>
+    <li>Accept the input as a file and produce the output to another file.</li>
+    <li>Have a single entry point. That is, it starts execution from one point. If your algorithm start
+executing on multiple files, you should combine them such that the <code>algo_exec</code> (details below)
+operates on one file only.</li>
+    <li>Read the first command line argument as the file name as following:<br>
+<code>command input_file</code></li>
+    <table style="width:100%"><tr><td><code>command</code></td><td>Mandatory</td><td>The command you use through terminal to run your
+algorithm</td></tr><tr><td><code>input_file</code></td><td>Mandatory</td><td>The input_file your algorithm read and process</td></tr></table>
             </ul>
 
 <h3>
@@ -69,8 +77,73 @@ specify its name in the next step)</td></tr></table></p></li>
 clone it to your machine (You will just use ‘try it’ directory for now). When you open the directory, you
 should be able to figure out the folders as in the following figure:</p>
         <img src="images/try-it-dir.png" alt="algorun try it directory">
-        <ul><li>First, you put all your algorithm source code in src folder.</li><li>Second, you edit each file in the algorun_info folder. The information you put here will be
-displayed in the web page of your algorithm.<ul style="list-style-type:circle"><li>manifest.json: contains your algorithm name, a short description, a long description, authors, web link and algorithm default parameters.</li><li>input_example.txt: give an example of how the input should be formatted.</li><li>output_example.txt: give an example of how the output looks like.</li></ul></li><li>The last step is to edit the Dockerfile. Open the file and follow the instructions in it. If you want to get a better understanding, you may navigate to the index in the full documentation (You do not have to; comments in the Dockerfile are self-illustrative).</li></ul>
+        <ul><li>First, you put all your algorithm source code in src folder.</li>
+            <li>Second, edit the Dockerfile. Open the file and follow the instructions in it. Basically, you are going only to install algorithm dependencies.<br>Example: <code>RUN apt-get install -y wget ruby2.0</code></li>
+            <li>Finally, edit files in the algorun_info folder.</li>
+        </ul>
+            
+        <table style="width:100%">
+            <tr>
+                <td colspan=2 class='manifest'><code>manifest.json</code></td>
+            </tr>
+            <tr>
+                <td class='manifest'><b>algo_name</b></td>
+                <td class='manifest'>the name of your algorithm</td>
+            </tr>
+            <tr>
+                <td class='manifest'><b>algo_summary </b></td>
+                <td class='manifest'>a 1-line summary of your algorithm</td>
+            </tr>
+            <tr>
+                <td class='manifest'><b>algo_description</b></td>
+                <td class='manifest'>a few lines description of your algorithm (basic html accepted)</td>
+            </tr>
+            <tr>
+                <td class='manifest'><b>algo_website </b></td>
+                <td class='manifest'>url where users can find more information about your algorithm</td>
+            </tr>
+            <tr>
+                <td class='manifest'><b>algo_keywords</b></td>
+                <td class='manifest'>a list of keywords describing your algorithm</td>
+            </tr>
+            <tr>
+                <td class='manifest'><b>algo_authors </b></td>
+                <td class='manifest'>a list of all the algorithm's authors</td>
+            </tr>
+            <tr>
+                <td class='manifest'><b>algo_exec </b></td>
+                <td class='manifest'>the command to start algorithm execution. AlgoRun passes the input file as
+the first argument</td>
+            </tr>
+            <tr>
+                <td class='manifest'><b>algo_output_filename </b></td>
+                <td class='manifest'>path of the file where your algorithm outputs its results</td>
+            </tr>
+            <tr>
+                <td class='manifest'><b>algo_parameters </b></td>
+                <td class='manifest'>list all the parameters available for your algorithm. These parameters will
+be available for use in your algorithm as environment variables.</td>
+            </tr>
+            <tr>
+                <td class='manifest'><b>algo_image </b></td>
+                <td class='manifest'>Example: "ahosny/react". leave "" if you did not upload your algorithm to
+docker hub or if you do not know what docker hub is :)</td>
+            </tr>
+            <tr>
+                <td colspan="2" class='manifest'><code>input_example.txt</code></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="manifest">Fill it with the format of the input your algorithm accepts. This serves as a
+guidance users to know how to input data</td>
+            </tr>
+            <tr>
+                <td colspan="2" class='manifest'><code>output_example.txt</code></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="manifest">Fill it with the format of the output your algorithm produces. This gives the
+user a glance on what result he will get</td>
+            </tr>
+            </table>    
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 3: Build, run and test your container</h3>
 
@@ -82,9 +155,8 @@ displayed in the web page of your algorithm.<ul style="list-style-type:circle"><
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
 <p>In ‘try it/src’ directory we have added a very simple ruby application that reads an input, appends a
 string to it and send it back (not an algorithm; but simple for illustration). We have also edited all files in
-‘algo_run’ info directory as a sample algorithm and then we added the instructions necessary in the
-Dockerfile. You can check the appendix in the <a href="docs/porting-your-algorithm-to-algorun-platform.pdf" target="_blank">full documentation!</a> for a detailed example. Lastly, we build and run our container as
-indicated in the previous section.</p>
+‘algorun_info' directory as a sample algorithm and then we added the dependencies necessary in the
+Dockerfile.</p>
         </section>
 
         <aside id="sidebar">
