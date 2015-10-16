@@ -66,11 +66,14 @@
                     </button>
                     <!--a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a-->
                     <a class="navbar-brand" href="index.html">AlgoRun</a>
+                    <p style="color: #00b4de">Reproducible Science</p>
                 </div>
 				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="index.html#getting-started">Getting Started</a></li>
+                        <li><a href="">Login</a></li>
                         <!--li><a href="about-us.html">About Us</a></li-->
                         <!--li><a href="services.html">Services</a></li-->
                         <!--li><a href="portfolio.html">Portfolio</a></li-->
@@ -92,50 +95,32 @@
 		
     </header><!--/header-->
 
-    <section id="main-slider" class="no-margin">
-        <div class="carousel slide">
-            <ol class="carousel-indicators">
+    <section class="no-margin">
+        <div>
+            <!--ol class="carousel-indicators">
                 <li data-target="#main-slider" data-slide-to="0" class="active"></li>
                 <li data-target="#main-slider" data-slide-to="1"></li>
-                <!--li data-target="#main-slider" data-slide-to="2"></li-->
-            </ol>
-            <div class="carousel-inner">
+                <!--li data-target="#main-slider" data-slide-to="2"></li>
+            </ol-->
+            <div>
 
-                <div class="item active" style="background-image: url(images/slider/bg2.jpg)">
+                <div class="item active" style="background-image: url(images/slider/back.png); height: 80vh;">
                     <div class="container">
                         <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1" style="color:#000;">AlgoRun</h1>
-                                    <h2 class="animation animated-item-2" style="color:#000;">a flexible container-based packaging system to publish reproducible computational processes ..</h2>
+                            <div class="col-sm-12">
+                                <div style="text-align: center; margin-top: 20vh;">
+                                    <img src="images/logo.png" style="width: 100px; heigt: 100px;">
+                                    <br>
+                                    <br>
+                                    <div align="center">
+                                    <input type="text" class="form-control" style="width: 50%; text-align: center" autocomplete="off" placeholder="type algorithm name or keywords">
+                                        </div>
+                                    <br>
+                                    <br>
+                                    <input type="submit" class="btn btn-info" value="Search Algorithms">
+                                    <br>
+                                    <br>
                                     <a class="btn-slide animation animated-item-3" href="#feature">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="images/slider/img2.png" class="img-responsive">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!--/.item-->
-                
-                <div class="item" style="background-image: url(images/slider/bg2.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1" style="color:#000;">AlgoRun</h1>
-                                    <h2 class="animation animated-item-2" style="color:#000;">Publish your algorithm in 3 easy steps ..</h2>
-                                    <a class="btn-slide" href="#feature">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs">
-                                <div class="slider-img">
-                                    <img src="images/slider/img2.png" class="img-responsive">
                                 </div>
                             </div>
 
@@ -184,12 +169,6 @@
                 </div--><!--/.item-->
             </div><!--/.carousel-inner-->
         </div><!--/.carousel-->
-        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
-            <i class="fa fa-chevron-left"></i>
-        </a>
-        <a class="next hidden-xs" href="#main-slider" data-slide="next">
-            <i class="fa fa-chevron-right"></i>
-        </a>
     </section><!--/#main-slider-->
 
     <section id="feature" >
@@ -441,14 +420,14 @@
         </div><!--/.container-->
     </section><!--/#content-->
 
-    <section id="services" class="service-item">
+    <section id="getting-started" class="service-item">
 	   <div class="container">
             <div class="center wow fadeInDown">
                 <h2>Getting Started</h2>
                 <p class="lead">Deploying your algorithm to AlgoRun is an easy three-steps process.<br>Watch the video or read our How-To Guide ..</p>
             </div>
 
-           <iframe width="100%" height="600"
+           <iframe width="100%" style="height:80vh;"
                    src="https://www.youtube.com/embed/C2KyyH7wqek">
            </iframe>
             <!--div class="row">

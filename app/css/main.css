@@ -651,13 +651,13 @@ input.search-form:hover {
   opacity: 1;
 }
 
-#services {
+#getting-started {
   background: #000 url(../images/services/bg_services.png);
   background-size: cover;
 }
 
-#services .lead,
-#services h2{
+#getting-started .lead,
+#getting-started h2{
   color: #fff;
 }
 
