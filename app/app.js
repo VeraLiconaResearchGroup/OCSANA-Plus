@@ -15,16 +15,24 @@ app.use('/fonts',express.static(__dirname+'/public/fonts'));
 app.use('/resources',express.static(__dirname+'/public/resources'));
 
 app.get('/', function(req, res){
-	var templateData = {title: "Home | AlgoRun", home_nav: "class='active'"};
+	var templateData = {title: "AlgoRun", home_nav: "class='active'"};
 	res.render('index.html', templateData);
 });
 app.get('/getting-started', function(req, res){
-	var templateData = {title: "Getting Started | AlgoRun", getting_started_nav: "class='active'"};
+	var templateData = {title: "Getting Started", getting_started_nav: "class='active'"};
 	res.render('getting-started.html', templateData);
 });
+app.get('/publish-your-algorithm', function(req, res){
+	var templateData = {title: "Publish Your Algorithm", publish_your_algorithm_nav: "class='active'"};
+	res.render('publish-your-algorithm.html', templateData);
+});
 app.get('/search', function(req, res){
-	var templateData = {title: "Search | AlgoRun"};
+	var templateData = {title: "Search"};
 	res.render('search.html', templateData);
+});
+app.get('/contact-us', function(req, res){
+	var templateData = {title: "Contact Us"};
+	res.render('contact-us.html', templateData);
 });
 
 var server = app.listen(31331);
