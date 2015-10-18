@@ -22,5 +22,9 @@ app.get('/getting-started', function(req, res){
 	var templateData = {title: "Getting Started | AlgoRun", getting_started_nav: "class='active'"};
 	res.render('getting-started.html', templateData);
 });
+app.get('/search', function(req, res){
+	var templateData = {title: "Search | AlgoRun"};
+	res.render('search.html', templateData);
+});
 
 var server = app.listen(31331);
