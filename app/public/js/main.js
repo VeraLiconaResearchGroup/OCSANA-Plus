@@ -68,3 +68,31 @@ jQuery(function($) {'use strict',
 		social_tools: false
 	});	
 });
+$("#search-button").click(function() {
+    var query = $('#search-query').val();
+    if(query !== ""){
+        location.href='/search?q=' + query;
+    } else {
+        swal({   title: "Error!",   text: "type algorithm name or keywords!",   type: "error",   confirmButtonText: "Ok" })
+    }
+});
+$("#search-query").keyup(function(event){
+    var query = $('#search-query').val();
+    if(event.keyCode == 13){
+        if(query !== ""){
+            location.href='/search?q=' + query;
+        } else{
+            swal({   title: "Error!",   text: "type algorithm name or keywords!",   type: "error",   confirmButtonText: "Ok" })
+        }
+    }
+});
+$("#search-bar").keyup(function(event){
+    var query = $('#search-bar').val();
+    if(event.keyCode == 13){
+        if(query !== ""){
+            location.href='/search?q=' + query;
+        } else{
+            swal({   title: "Error!",   text: "type algorithm name or keywords!",   type: "error",   confirmButtonText: "Ok" })
+        }
+    }
+});
