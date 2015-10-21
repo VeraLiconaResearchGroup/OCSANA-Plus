@@ -92,7 +92,7 @@ $("#search-bar").keyup(function(event){
         if(query !== ""){
             location.href='/search?q=' + query;
         } else{
-            swal({   title: "Error!",   text: "type algorithm name or keywords!",   type: "error",   confirmButtonText: "Ok" })
+            swal({   title: "Error!",   text: "type algorithm name or keywords!",   type: "error",   confirmButtonText: "Ok" });
         }
     }
 });

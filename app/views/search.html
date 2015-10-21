@@ -27,3 +27,33 @@
             </div><!--/.carousel-inner-->
         </div><!--/.carousel-->
     </section><!--/#main-slider-->
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<script>var buttons = "{{=it.buttons}}";
+    btns_ids = buttons.split(",");
+    btns_ids.forEach(function(id){
+        $("#"+id).click(function(){
+            $("#"+id).html("deploying ..");
+            $('#'+id).prop('disabled', true);
+            var jqxhr = $.get( "/try-it?image="+id, function() {})
+            .done(function(data) {
+                $("#"+id).html("try it");
+                $('#'+id).prop('disabled', false);
+                if(data['status'] === 'success'){
+                    var temp_server = data['endpoint'];
+                    window.open(temp_server, '_blank');
+                } else {
+                    swal({   title: "try again!",   text: data['error_message'],   type: "error",   confirmButtonText: "Ok" });
+                }
+            })
+            .fail(function() {
+                $("#"+id).html("try it");
+                $('#'+id).prop('disabled', false);
+                swal({   title: "try again!",   text: "Server Error!",   type: "error",   confirmButtonText: "Ok" });
+            });
+        });
+    });
+</script>
