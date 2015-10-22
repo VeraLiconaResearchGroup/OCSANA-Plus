@@ -4,7 +4,11 @@ var express = require('express')
   , pub = __dirname+'/public'
   , view = __dirname+'/views';
 var db = require('./models/db.js');
+var email = require('./email/email.js');
 var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var multer = require('multer');
+var upload = multer();
 var uuid = require('node-uuid');
 var request = require('request');
 
@@ -12,6 +16,9 @@ app.set('views', __dirname+'/views');
 app.set('view engine', 'dot');
 app.engine('html', doT.__express);
 app.use(cookieParser());
+app.use(bodyParser.json({limit: '10mb'}));
+app.use(bodyParser.urlencoded({limit: '10mb', extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/css',express.static(__dirname+'/public/css'));
 app.use('/images',express.static(__dirname+'/public/images'));
 app.use('/js',express.static(__dirname+'/public/js'));
@@ -89,7 +96,7 @@ app.get('/try-it', function(req, res){
     res.status = 200;
     var docker_image = req.query.image;
     var id = req.cookies.algorun;
-    var algomanager = "http://manager.algorun.org";
+    var algomanager = "http://localhost:8764";
     
     request.post(algomanager + '/api/v1/deploy', 
              { form: { image: docker_image.replace("-", "/"), node_id: id } },
@@ -109,6 +116,23 @@ app.get('/contact-us', function(req, res){
     
 	var templateData = {title: "Contact Us"};
 	res.render('contact-us.html', templateData);
+});
+app.post('/send-contact', upload.array(), function(req, res){
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.status = 200;
+    
+    var name = req.body.name;
+    var mail = req.body.email;
+    var message = req.body.message;
+    
+    email.sendContactConfirmation(name, mail, message, function(result){
+        if(result === "success"){
+            res.send("We received your message. Thank you!");
+        } else {
+            res.send("Something went wrong and we can't get your message. Try agian later!");
+        }
+    });
 });
 
 var server = app.listen(31331);

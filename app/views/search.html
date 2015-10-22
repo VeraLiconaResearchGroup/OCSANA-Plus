@@ -46,7 +46,7 @@
                     var temp_server = data['endpoint'];
                     window.open(temp_server, '_blank');
                 } else {
-                    swal({   title: "try again!",   text: data['error_message'],   type: "error",   confirmButtonText: "Ok" });
+                    swal({   title: "try again!",   text: "Server Error!",   type: "error",   confirmButtonText: "Ok" });
                 }
             })
             .fail(function() {
