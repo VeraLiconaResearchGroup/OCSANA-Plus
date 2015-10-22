@@ -134,6 +134,24 @@ app.post('/send-contact', upload.array(), function(req, res){
         }
     });
 });
+app.post('/publish-request', upload.array(), function(req, res){
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.status = 200;
+    
+    var name = req.body.name;
+    var mail = req.body.email;
+    var docker = req.body.docker;
+    var experience = req.body.experience;
+    
+    email.sendPublishConfirmation(name, mail, docker, experience, function(result){
+        if(result === "success"){
+            res.send("We received your algorithm details. Thank you!");
+        } else {
+            res.send("Something went wrong and we can't get your algorithm details. Try agian later!");
+        }
+    });
+});
 
 var server = app.listen(31331);
 enableDestroy(server);

@@ -6,25 +6,25 @@
             </div> 
             <div class="row contact-wrap"> 
                 <div class="status alert alert-success" style="display: none"></div>
-                <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="">
+                <form id="publish-contact-form" class="contact-form" name="contact-form" method="post" action="/publish-request">
                     <div class="col-sm-5 col-sm-offset-1">
                         <div class="form-group">
                             <label>Name *</label>
-                            <input type="text" name="name" class="form-control" required="required">
+                            <input type="text" name="name" id="name" class="form-control" required="required">
                         </div>
                         <div class="form-group">
                             <label>Email *</label>
-                            <input type="email" name="email" class="form-control" required="required">
+                            <input type="email" name="email" id="email" class="form-control" required="required">
                         </div>
                         <div class="form-group">
                             <label>Docker Hub Image Handler (ex: algorun/algorun) *</label>
-                            <input type="test" name="docker-image" class="form-control" required="required">
+                            <input type="test" name="docker" id="docker" class="form-control" required="required">
                         </div>
                     </div>
                     <div class="col-sm-5">
                         <div class="form-group">
                             <label>How do you find your experience with AlgoRun?</label>
-                            <textarea name="message" id="message" class="form-control" rows="9"></textarea>
+                            <textarea name="experience" id="experience" class="form-control" rows="9"></textarea>
                         </div>                        
                     </div>
                     <div class="form-group" style="text-align: center">

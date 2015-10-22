@@ -58,6 +58,27 @@ jQuery(function($) {'use strict',
             
 		});
 	});
+    var pform = $('#publish-contact-form');
+	pform.submit(function(event){
+		event.preventDefault();
+		var form_status = $('<div class="form_status"></div>');
+		$.ajax({
+			url: $(this).attr('action'),
+            method: 'POST',
+            data: pform.serialize(),
+			beforeSend: function(){
+				pform.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Sending publish request ...</p>').fadeIn() );
+			}
+		}).done(function(data){
+			form_status.html('<p class="text-success">' + data + '</p>').delay(3000).fadeOut();
+            $("#name").val('');
+            $("#email").val('');
+            $("#docker").val('');
+            $("#experience").val('');
+            
+		});
+	});
+                    
 
 	
 	//goto top
