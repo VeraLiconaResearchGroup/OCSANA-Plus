@@ -72,7 +72,7 @@ app.get('/search', function(req, res){
         db.searchKeyword(search_criteria, function(keywords_rows){
             search_criteria = search_criteria.substring(0, 20) + ' ...';
             if(name_rows.length == 0 && keywords_rows.length == 0){
-                var results = "<div class='row''><div class='col-sm-12'><h2>Sorry! We cannot find related algorithms :(</h2><h3>Please, check back soon. We keep updating our repository ..</h3></div></div>";
+                var results = "<div class='row''><div class='col-sm-12'><h2>Sorry! We cannot find related algorithms :(</h2><h3>Please, check back soon. We keep updating our repository ..<br>You can try using 'bio' or 'engineering' for the search or check <a href='/#recent-works'>our recently published algorithm</a></h3></div></div>";
                 var templateData = {title: "Search", q: search_criteria, result: results};
 	            res.render('search.html', templateData);
             } else {
@@ -96,7 +96,7 @@ app.get('/try-it', function(req, res){
     res.status = 200;
     var docker_image = req.query.image;
     var id = req.cookies.algorun;
-    var algomanager = "http://localhost:8764";
+    var algomanager = "http://manager.algorun.org";
     
     request.post(algomanager + '/api/v1/deploy', 
              { form: { image: docker_image.replace("-", "/"), node_id: id } },
