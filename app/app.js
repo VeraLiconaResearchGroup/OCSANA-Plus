@@ -25,7 +25,6 @@ app.use('/js',express.static(__dirname+'/public/js'));
 app.use('/fonts',express.static(__dirname+'/public/fonts'));
 app.use('/resources',express.static(__dirname+'/public/resources'));
 
-
 app.get('/', function(req, res){
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
@@ -151,6 +150,25 @@ app.post('/publish-request', upload.array(), function(req, res){
             res.send("Something went wrong and we can't get your algorithm details. Try agian later!");
         }
     });
+});
+// Handle 404
+app.use(function(req, res) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.status = 404;
+    
+	var templateData = {title: "Not Found"};
+	res.render('404.html', templateData);
+});
+ 
+// Handle 500
+app.use(function(error, req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.status = 500;
+    
+	var templateData = {title: "Not Found"};
+	res.render('500.html', templateData);
 });
 
 var server = app.listen(31331);
