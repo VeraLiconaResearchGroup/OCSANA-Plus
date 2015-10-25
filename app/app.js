@@ -116,7 +116,7 @@ app.get('/contact-us', function(req, res){
 	var templateData = {title: "Contact Us"};
 	res.render('contact-us.html', templateData);
 });
-app.post('/send-contact', upload.array(), function(req, res){
+/*app.post('/send-contact', upload.array(), function(req, res){
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     res.status = 200;
@@ -132,7 +132,7 @@ app.post('/send-contact', upload.array(), function(req, res){
             res.send("Something went wrong and we can't get your message. Try agian later!");
         }
     });
-});
+});*/
 app.post('/publish-request', upload.array(), function(req, res){
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
