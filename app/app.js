@@ -33,8 +33,19 @@ app.get('/', function(req, res){
         res.cookie('algorun', uuid.v4());
     }
     
-	var templateData = {title: "AlgoRun", home_nav: "class='active'"};
+	var templateData = {title: "AlgoRun"};
 	res.render('index.html', templateData);
+});
+app.get('/browse', function(req, res){
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.status = 200;  
+    if(isEmpty(req.cookies)){
+        res.cookie('algorun', uuid.v4());
+    }
+    
+	var templateData = {title: "Browse Algorithms", browse_nav: "class='active'"};
+	res.render('browse.html', templateData);
 });
 app.get('/getting-started', function(req, res){
     res.header("Access-Control-Allow-Origin", "*");
@@ -83,7 +94,7 @@ app.get('/search', function(req, res){
                     results += result_instance;
                     buttons.push(entry.docker_image.replace('/', '-'));
                 });
-                var templateData = {title: "Search", q: search_criteria, result: results, buttons: buttons};
+                var templateData = {title: "Search", q: search_criteria, result: results, buttons: buttons, browse_nav: "class='active'"};
 	            res.render('search.html', templateData);
             }
         });
