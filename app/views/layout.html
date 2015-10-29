@@ -27,30 +27,6 @@
     </head><!--/head-->
 	<body>
         <header id="header">
-        <div class="top-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-4">
-                        <!--div class="top-number"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div-->
-                    </div>
-                    <div class="col-sm-6 col-xs-8">
-                       <div class="social">
-                            <ul class="social-share">
-                                <!--li><a href="#"><i class="fa fa-facebook"></i></a></li-->
-                                <li><a href="https://twitter.com/algorun" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                <!--li><a href="#"><i class="fa fa-linkedin"></i></a></li--> 
-                                <!--li><a href="#"><i class="fa fa-dribbble"></i></a></li-->
-                                <!--li><a href="#"><i class="fa fa-skype"></i></a></li-->
-                            </ul>
-                            <div class="search">
-                                <input id='search-bar' type="text" class="search-form" autocomplete="off" placeholder="Search">
-                                <i class="fa fa-search"></i>
-                           </div>
-                       </div>
-                    </div>
-                </div>
-            </div><!--/.container-->
-        </div><!--/.top-bar-->
 
         <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
@@ -70,7 +46,7 @@
                     <ul class="nav navbar-nav">
                         <li {{=it.home_nav}}><a href="/">Home</a></li>
                         <li {{=it.getting_started_nav}}><a href="getting-started">Getting Started</a></li>
-                        <li {{=it.publish_your_algorithm_nav}}><a href="publish-your-algorithm">Publish Your Algorithm</a></li>                               <li><a target="_blank" href="https://github.com/algorun">GitHub</a></li>                     
+                        <li {{=it.publish_your_algorithm_nav}}><a href="publish-your-algorithm">Publish Your Algorithm</a></li>                          
                     </ul>
                 </div>
             </div><!--/.container-->
@@ -81,10 +57,14 @@
         <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     &copy; 2015 <a href="/">AlgoRun</a>. All Rights Reserved.
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-4" style="text-align:center;">
+                    <a href="https://github.com/algorun/algorun" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+                    &nbsp;&nbsp;<a href="https://twitter.com/algorun" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                </div>
+                <div class="col-sm-4">
                     <ul class="pull-right">
                         <li><a href="/">Home</a></li>
                         <li><a href="/contact-us">Contact Us</a></li>
