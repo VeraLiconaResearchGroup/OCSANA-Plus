@@ -79,8 +79,6 @@ jQuery(function($) {'use strict',
 		});
 	});
                     
-
-	
 	//goto top
 	$('.gototop').click(function(event) {
 		event.preventDefault();
