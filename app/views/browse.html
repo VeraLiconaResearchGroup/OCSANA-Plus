@@ -1,27 +1,23 @@
-    <section class="no-margin">
+<style>
+    em {
+        background-color: #FFFF00;
+    }
+</style>
+<section class="no-margin">
         <div>
             <div>
-                <div class="item active" style="background-image: url(images/slider/back.png); height: 90vh;">
+                <div class="item active" style="background-image: url(images/slider/back.png);">
                     <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-12">
-                                <div style="text-align: center; margin-top: 20vh;">
-                                    <img src="images/logo.png" style="width: 100px; heigt: 100px;">
-                                    <br>
-                                    <br>
-                                    <div align="center">
-                                    <input id="search-query" type="text" class="form-control" style="width: 50%; text-align: center" autocomplete="off" placeholder="type algorithm name or keywords">
-                                        </div>
-                                    <br>
-                                    <br>
-                                    <input id="search-button" type="submit" class="btn btn-info" value="Search Algorithms">
-                                    <br>
-                                    <br>
-                                    <div class="pull-center">
-                                        <a href="/search?q= "><p>Or Browse Recently Published Algorithms</p></a>
-                                    </div>
+                        <div style="margin-top: 10vh;">
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <input type="text" id="search-box" class="form-control" style="text-align: center" autocomplete="off" placeholder="type algorithm name or keywords"/>
                                 </div>
+                                <div class="col-md-1"><i class="fa fa-search" style="margin-top: 10px;"></i></div>
                             </div>
+                            <br>        
+                            <div id="hits-container"></div>
+                            <div id="pagination-container"></div>
                         </div>
                     </div>
                 </div><!--/.item-->
@@ -29,3 +25,7 @@
             </div>
         </div>
     </section>
+
+<!-- Algolia search -->
+<script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+<script src="js/browse.js"></script>

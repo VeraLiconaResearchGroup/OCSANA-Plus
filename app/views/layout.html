@@ -15,6 +15,9 @@
         <link href="css/main.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+        
+        <!-- Algolia search -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
@@ -24,6 +27,8 @@
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+        
+        
     </head><!--/head-->
 	<body>
         <header id="header">
@@ -38,8 +43,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <!--a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a-->
-                    <a class="navbar-brand" href="/">&nbsp;AlgoRun</a>
-                    <p style="color: #00b4de">ready to run algorithms</p>
+                    <a href="/"><img src="images/logo.png" style="width: 200px;"></a>
                 </div>
 				
                 <div class="collapse navbar-collapse navbar-right" style="margin-top:10px;">
@@ -54,7 +58,7 @@
 		
     </header><!--/header-->
 		{{=it.body}}
-        <footer id="footer" class="midnight-blue">
+    <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
