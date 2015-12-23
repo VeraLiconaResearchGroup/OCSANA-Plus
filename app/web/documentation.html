@@ -35,25 +35,33 @@
 	        	
 		        <nav id="mainmenu" class="mainmenu">
 					<ul>
-						<li class="logo-wrapper"><a href="index.html"><img src="img/algorun-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
+						<li class="logo-wrapper"><a href="/"><img src="img/algorun-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
 						<li>
-							<a href="index.html">Home</a>
+							<a href="/">Home</a>
 						</li>
 						<li>
-							<a href="browse.html">Browse</a>
+							<a href="/browse">Browse</a>
 						</li>
-						<li class="active">
-							<a href="documentation.html">Documentation</a>
+                        <li class="active">
+                            <a href="/documentation">Documentation</a>
 						</li>
                         <li>
-							<a href="submit-algorithm.html">Submit Algorithm</a>
+							<a href="/submit-algorithm">Submit Algorithm</a>
 						</li>
 					</ul>
 				</nav>
 			</div>
 		</div>
-
-        <iframe src="resources/algorun-documentation.pdf" width="100%" style="height: 90vh"></iframe>
+        
+        <div class="row">
+            <div class="col-md-3 doc-side-nav-col">
+                <h4 class="doc-side-nav doc-active" id="doc-1">Packaging Sofware (v1.2)</h4>
+                <h4 class="doc-side-nav" id="doc-2">Example: Packaging Bowtie Sofware</h4>
+            </div>
+            <div class="col-md-9">
+                <iframe src="resources/packaging-software.pdf" width="100%" style="height: 90vh" id="doc-pdf"></iframe>
+            </div>
+        </div>
 		
 	    <!-- Footer -->
 	    <div class="footer">
@@ -67,7 +75,7 @@
                     <a href="https://twitter.com/algorun" target="_blank"><img src="img/twitter.png" width="25" height="25"></a>
                 </div>
                 <div class="col-sm-4" style="text-align: right;margin-top: 25px;">
-                    <a href="contact-us.html">Contact Us</a>
+                    <a href="contact-us.html" style="color: #FFF;">Contact Us</a>
                 </div>
 		    	</div>
 		    </div>
@@ -83,6 +91,7 @@
         <script src="js/jquery.bxslider.js"></script>
         <script src="js/main-menu.js"></script>
         <script src="js/template.js"></script>
+        <script src="js/documentation.js"></script>
 
     </body>
 </html>

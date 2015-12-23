@@ -7,7 +7,7 @@ $(document).ready(function(){
         pagination: true,
         animateStartingFrameIn: true,
         autoPlay: true,
-        autoPlayDelay: 5000,
+        autoPlayDelay: 8000,
         preloader: true
     };
     
