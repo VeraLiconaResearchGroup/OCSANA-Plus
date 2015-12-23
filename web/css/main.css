@@ -60,6 +60,8 @@ em {
   -o-transition: color .25s linear;
   -ms-transition: color .25s linear;
   transition: color .25s linear;
+  font-size: 50px;
+  line-height: 1.2;
 }
 .site-header:hover {
   color: #2C3D50;
@@ -1939,6 +1941,11 @@ span.color-red {
 /*--------------------------------------------------------------------------
 +	Homepage Slider Style (modified sequencejs CSS). Sorry, no LESS here
 --------------------------------------------------------------------------*/
+.algorun-title {
+    margin-left: 50px;
+    padding-top: 30px;
+    width: 48%;
+}
 #sequence {
   overflow: hidden;
   width: 100%;
@@ -1947,7 +1954,7 @@ span.color-red {
   font-size: 0.625em;
   margin: 0 auto 30px auto;
   position: relative;
-  height: 400px;
+  height: 80vh;
 }
 #sequence img {
   max-width: 100%;
@@ -1974,7 +1981,7 @@ span.color-red {
 #sequence > .sequence-canvas > li {
   position: absolute;
   width: 100%;
-  height: 400px;
+  height: 100%;
   z-index: 1;
   -webkit-transition-property: background;
   -moz-transition-property: background;
@@ -2026,7 +2033,7 @@ span.color-red {
   background-image: url(../img/homepage-slider/slider-bg14.jpg);
 }
 #sequence > .sequence-canvas > li img {
-  height: 96%;
+  height: 100%;
 }
 #sequence > .sequence-canvas li > * {
   position: absolute;
