@@ -266,8 +266,8 @@ search.addWidget(
                             </div> \
                             <br> \
 		        			<p>" + algo_summary + "</p> \
-                            <p><b>input type: </b>" + algo_input_type + "<br> \
-                            <b>output type:</b> algorun:custom</p> \
+                            <p><b>input type: </b><a href='/input-output-types' target='_blank'>" + algo_input_type + "</a><br> \
+                            <b>output type:</b><a href='/input-output-types' target='_blank'> algorun:custom</a></p> \
 		        			<a href='" + algo_link + "' target='_blank' class='btn'>Try now!</a> \
 		        		</div> \
 	        		</div>";
