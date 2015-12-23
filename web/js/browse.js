@@ -231,20 +231,46 @@ search.addWidget(
                 var algo_name = data._highlightResult.algo_name.value;
                 var algo_authors = "";
                 for(i=0; i<data.algo_authors.length;i++){
-                    algo_authors += data._highlightResult.algo_authors[i].name.value;
-                    if(i < (data.algo_authors.length - 1)){
-                        algo_authors += ", ";
+                    if(data.algo_authors[i].profile_pic != undefined) {
+                        if(data.algo_authors[i].personal_website != undefined && data.algo_authors[i].personal_website != ""){
+                            var website = data.algo_authors[i].personal_website + "' target='_blank'";
+                        }else{
+                            website = "#'";
+                        }
+                        algo_authors += "<a href='" + website + "><img src='img/authors/" + data.algo_authors[i].profile_pic + "' style='border-radius: 50%;' alt='author profile pic' data-toggle='tooltip' title='" + data.algo_authors[i].name + "'></a>&nbsp&nbsp";    
+                    } else{
+                        if(data.algo_authors[i].personal_website != undefined && data.algo_authors[i].personal_website != ""){
+                            var website = data.algo_authors[i].personal_website + "' target='_blank'";
+                        }else{
+                            website = "#'";
+                        }
+                        algo_authors += "<a href='" + website + "><img src='img/authors/author.png' style='border-radius: 30%;' alt='author profile pic' data-toggle='tooltip' title='" + data.algo_authors[i].name + "'></a>&nbsp&nbsp";
                     }
+                    
                 }
                 var algo_summary = data._highlightResult.algo_summary.value;
                 var algo_keywords = "<b>Keywords</b>: ";
                 data._highlightResult.algo_keywords.forEach(function(entry){
                     algo_keywords += JSON.stringify(entry.value) + " ";
                 });
-                var algo_input_type = "<b>Input type</b>: " + data._highlightResult.input_type.value;
+                var algo_input_type = data._highlightResult.input_type.value;
                 var algo_link = data.url;
                 
-                var result_card = "<div class='col-md-1'></div><div class='col-md-5 search-result'><h3>" + algo_name + " <span class='author'>&nbsp;&nbsp; " + algo_authors + " </span></h3><h5>" + algo_summary + "</h5><p class='tags'>" + algo_keywords + "<br>" + algo_input_type + "</p><div class='try-button'><a href='" + algo_link + "' target='_blank'><div class='btn pull-right'>try now</div></a></div></div>";
+                var result_card = "<div class='col-md-4 col-sm-6' style='height:400px;'> \
+	        			<div class='service-wrapper'> \
+		        			<img src='img/search-icon.png'> \
+		        			<h3>" + algo_name + "</h3> \
+                            <div class='row'>";
+                result_card += algo_authors;
+                result_card += " \
+                            </div> \
+                            <br> \
+		        			<p>" + algo_summary + "</p> \
+                            <p><b>input type: </b>" + algo_input_type + "<br> \
+                            <b>output type:</b> algorun:custom</p> \
+		        			<a href='" + algo_link + "' target='_blank' class='btn'>Try now!</a> \
+		        		</div> \
+	        		</div>";
                 return result_card;
             },
             hitsPerPage: 6
