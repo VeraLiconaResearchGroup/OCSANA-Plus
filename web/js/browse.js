@@ -254,6 +254,12 @@ search.addWidget(
                     algo_keywords += JSON.stringify(entry.value) + " ";
                 });
                 var algo_input_type = data._highlightResult.input_type.value;
+                var algo_outuput_type = data.output_type;
+                if(algo_outuput_type == undefined){
+                    algo_outuput_type = "algorun:custom";
+                }else{
+                    algo_outuput_type = data._highlightResult.output_type.value;
+                }
                 var algo_link = data.url;
                 
                 var result_card = "<div class='col-md-4 col-sm-6' style='height:400px;'> \
@@ -267,7 +273,7 @@ search.addWidget(
                             <br> \
 		        			<p>" + algo_summary + "</p> \
                             <p><b>input type: </b><a href='/input-output-types' target='_blank'>" + algo_input_type + "</a><br> \
-                            <b>output type:</b><a href='/input-output-types' target='_blank'> algorun:custom</a></p> \
+                            <b>output type:</b><a href='/input-output-types' target='_blank'> " + algo_outuput_type + "</a></p> \
 		        			<a href='" + algo_link + "' target='_blank' class='btn'>Try now!</a> \
 		        		</div> \
 	        		</div>";
