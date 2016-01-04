@@ -230,51 +230,35 @@ search.addWidget(
             item: function(data) {
                 var algo_name = data._highlightResult.algo_name.value;
                 var algo_authors = "";
+		var idx_auth=1;
                 for(i=0; i<data.algo_authors.length;i++){
-                    if(data.algo_authors[i].profile_pic != undefined) {
-                        if(data.algo_authors[i].personal_website != undefined && data.algo_authors[i].personal_website != ""){
-                            var website = data.algo_authors[i].personal_website + "' target='_blank'";
-                        }else{
-                            website = "#'";
-                        }
-                        algo_authors += "<a href='" + website + "><img src='img/authors/" + data.algo_authors[i].profile_pic + "' style='border-radius: 50%;' alt='author profile pic' data-toggle='tooltip' title='" + data.algo_authors[i].name + "'></a>&nbsp&nbsp";    
-                    } else{
-                        if(data.algo_authors[i].personal_website != undefined && data.algo_authors[i].personal_website != ""){
-                            var website = data.algo_authors[i].personal_website + "' target='_blank'";
-                        }else{
-                            website = "#'";
-                        }
-                        algo_authors += "<a href='" + website + "><img src='img/authors/author.png' style='border-radius: 30%;' alt='author profile pic' data-toggle='tooltip' title='" + data.algo_authors[i].name + "'></a>&nbsp&nbsp";
-                    }
-                    
+			if (idx_auth>1) { algo_authors += ", " }
+			if(data.algo_authors[i].personal_website != undefined && data.algo_authors[i].personal_website != ""){
+				algo_authors += "<a style='text-decoration:none;' href='" + data.algo_authors[i].personal_website + "' target='_blank'>"+data.algo_authors[i].name+ "</a>&nbsp&nbsp";    
+			}else{
+				algo_authors += data.algo_authors[i].name;    
+			}
+			idx_auth+=1;
                 }
                 var algo_summary = data._highlightResult.algo_summary.value;
-                var algo_keywords = "<b>Keywords</b>: ";
+                var algo_keywords ='<span style="font-size:85%;">';
+		var idx_kw=1;
                 data._highlightResult.algo_keywords.forEach(function(entry){
-                    algo_keywords += JSON.stringify(entry.value) + " ";
+		    if (idx_kw>1) { algo_keywords += " - " }
+                    algo_keywords += "<i>"+entry.value + "</i>";
+		    idx_kw+=1;
                 });
-                var algo_input_type = data._highlightResult.input_type.value;
-                var algo_outuput_type = data.output_type;
-                if(algo_outuput_type == undefined){
-                    algo_outuput_type = "algorun:custom";
-                }else{
-                    algo_outuput_type = data._highlightResult.output_type.value;
-                }
+		algo_keywords += '</span>'
                 var algo_link = data.url;
                 
-                var result_card = "<div class='col-md-4 col-sm-6' style='height:400px;'> \
+                var result_card = "<div class='col-md-4 col-sm-6'> \
 	        			<div class='service-wrapper'> \
-		        			<img src='img/search-icon.png'> \
-		        			<h3>" + algo_name + "</h3> \
-                            <div class='row'>";
-                result_card += algo_authors;
+		        			<h2 class='search'>" + algo_name + "</h2>";
                 result_card += " \
-                            </div> \
-                            <br> \
-		        			<p>" + algo_summary + "</p> \
-                            <p><b>input type: </b><a href='/input-output-types' target='_blank'>" + algo_input_type + "</a><br> \
-                            <b>output type:</b><a href='/input-output-types' target='_blank'> " + algo_outuput_type + "</a></p> \
-		        			<a href='" + algo_link + "' target='_blank' class='btn'>Try now!</a> \
+		        			<p style='border-bottom:2px solid #2C3D50;padding-bottom:10px;'>" + algo_summary + "</p> \
+		        			<p style='font-size:90%;'>" + algo_authors + "</p> \
+		        			<p>" + algo_keywords + "</p> \
+		        			<div style='width:82%;position:absolute;margin:0px auto;bottom:30px;'><a href='" + algo_link + "' target='_blank' class='btn' style='text-decoration:none;'>Use now</a></div> \
 		        		</div> \
 	        		</div>";
                 return result_card;

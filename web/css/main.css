@@ -44,50 +44,23 @@ em {
 }
 
 /* AlgoRun defined styles */
+.banner {
+  background-color: #eb2b00;
+  width:100%;
+  height:230px;
+}
 .site-header {
-  color: #2C3D50;
-  font-size: 2.5em;
-  font-family: Georgia, serif;
+  color: white;
   text-align: center;
-  line-height: 28px;
-  position: relative;
-  padding-left: 16px;
-  padding-bottom: 32px;
-  margin-bottom: 15px;
-  display: block;
   -webkit-transition: color .25s linear;
   -moz-transition: color .25s linear;
   -o-transition: color .25s linear;
   -ms-transition: color .25s linear;
   transition: color .25s linear;
-  font-size: 50px;
+  font-size: 40px;
   line-height: 1.2;
+  margin-top: 30px !important;
 }
-.site-header:hover {
-  color: #2C3D50;
-  text-decoration: none;
-}
-.site-header:after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: -10px;
-  right: 20px;
-  width: 120px;
-  height: 32px;
-  background-repeat: no-repeat;
-  -webkit-transition: .25s linear;
-  -moz-transition: .25s linear;
-  -o-transition: .25s linear;
-  -ms-transition: .25s linear;
-  transition: .25s linear;
-}
-.site-header:before {
-  content: "\201C";
-  margin-left: -16px;
-  font-size: 2.2em;
-}
-
 /*--------------------------------------------------------------------------
 	General Style
 --------------------------------------------------------------------------*/
@@ -166,7 +139,7 @@ body {
 h1 {
   color: #2C3D50;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
+  font-weight: 400;
 }
 h2 {
   color: #2C3D50;
@@ -176,6 +149,10 @@ h2 {
   line-height: 1.5em;
   margin: 30px 0;
   padding-left: 10px;
+}
+h2.search {
+  margin: 0px 0px 10px 0px;
+  padding-left: 0px;
 }
 h3 {
   font-family: 'Open Sans', sans-serif;
@@ -189,6 +166,7 @@ h4 {
 }
 a {
   color: #2C3D50;
+  text-decoration: underline;
 }
 a:hover {
   color: #2C3D50;
@@ -199,9 +177,10 @@ a:hover {
 /* Multicolumn */
 .service-wrapper {
   background: #FFF;
+  min-height: 290px;
   margin: 20px 10px;
   text-align: center;
-  padding: 30px 20px;
+  padding: 15px 10px;
   -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 5px;
@@ -1954,7 +1933,7 @@ span.color-red {
   font-size: 0.625em;
   margin: 0 auto 30px auto;
   position: relative;
-  height: 80vh;
+  height: 300px;
 }
 #sequence img {
   max-width: 100%;
@@ -2572,6 +2551,9 @@ span.color-red {
   }
 }
 @media screen and (max-width: 479px) {
+  .site-header {
+	  font-size: 24px;
+  }
   .mainmenu {
     font-size: 120%;
     border: none;
