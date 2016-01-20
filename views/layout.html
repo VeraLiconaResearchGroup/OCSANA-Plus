@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Browse</title>
+        <title>AlgoRun</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
@@ -22,14 +19,9 @@
 		<link rel="stylesheet" href="css/main.css">
 
         <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        
     </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-        
 
+    <body style="height:90vh">
         <!-- Navigation & Logo-->
         <div class="mainmenu-wrapper">
 	        <div class="container">
@@ -37,43 +29,24 @@
 		        <nav id="mainmenu" class="mainmenu">
 					<ul>
 						<li class="logo-wrapper"><a href="/"><img src="img/algorun-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
-						<li>
+						<li {{=it.home_tab}}>
 							<a href="/">Home</a>
 						</li>
-						<li class="active">
+						<li {{=it.browse_tab}}>
 							<a href="/browse">Browse</a>
 						</li>
-                        <li>
+                        <li {{=it.doc_tab}}>
                             <a href="/documentation">Documentation</a>
 						</li>
-                        <li>
+                        <li {{=it.submit_tab}}>
 							<a href="/submit-algorithm">Submit Algorithm</a>
 						</li>
 					</ul>
 				</nav>
 			</div>
 		</div>
-        
-        <!-- Algolia Search -->
-        <div class="container">
-            <div style="margin-top: 20px; height: 80vh;">
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <input type="text" id="search-box" class="form-control" style="text-align: center" autocomplete="off" placeholder="search by algorithm name or keywords"/>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>       
-                <div id="hits-container" class="row">
-                    
-                    
-                </div>
-                <div id="pagination-container"></div>
-            </div>
-        </div>
-        
-
-	    <!-- Footer -->
+        {{=it.body}}
+        <!-- Footer -->
 	    <div class="footer">
 	    	<div class="container">
 		    	<div class="row" style="margin-bottom: 10px;">
@@ -85,12 +58,12 @@
                     <a href="https://twitter.com/algorun" target="_blank"><img src="img/twitter.png" width="25" height="25"></a>
                 </div>
                 <div class="col-sm-4" style="text-align: right;margin-top: 25px;">
-                    <a href="contact-us.html" style="color: #FFF;">Contact Us</a>
+                    <a href="/contact-us" style="color: #FFF;">Contact Us</a>
                 </div>
 		    	</div>
 		    </div>
 	    </div>
-
+    
         <!-- Javascripts -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
@@ -101,9 +74,5 @@
         <script src="js/jquery.bxslider.js"></script>
         <script src="js/main-menu.js"></script>
         <script src="js/template.js"></script>
-        <!-- Algolia search -->
-        <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
-        <script src="js/browse.js"></script>
-
     </body>
 </html>
