@@ -9,7 +9,11 @@
   "author": "Abdelrahman Hosny",
   "dependencies": {
     "express": "4.13.1",
-    "path": "0.12.7"
+    "path": "0.12.7",
+    "express-dot": "0.1.0",
+    "cookie-parser": "1.4.1",
+    "body-parser": "1.14.2",
+    "multer": "1.1.0"
   },
   "repository": "https://github.com/algorun/algorun.github.io",
   "license": "SEE LICENSE IN LICENSE file"
