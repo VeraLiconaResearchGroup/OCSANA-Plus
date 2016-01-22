@@ -3,17 +3,28 @@ var express = require('express')
   , doT = require('express-dot')
   , pub = __dirname+'/public'
   , view = __dirname+'/views';
-var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var multer = require('multer');
 var upload = multer();
-var uuid = require('node-uuid');
-var request = require('request');
+var engine = require('express-dot-engine');
+
+/*engine.settings.dot = {
+  evaluate:    /\[\[([\s\S]+?)\]\]/g,
+  interpolate: /\[\[=([\s\S]+?)\]\]/g,
+  encode:      /\[\[!([\s\S]+?)\]\]/g,
+  use:         /\[\[#([\s\S]+?)\]\]/g,
+  define:      /\[\[##\s*([\w\.$]+)\s*(\:|=)([\s\S]+?)#\]\]/g,
+  conditional: /\[\[\?(\?)?\s*([\s\S]*?)\s*\]\]/g,
+  iterate:     /\[\[~\s*(?:\]\]|([\s\S]+?)\s*\:\s*([\w$]+)\s*(?:\:\s*([\w$]+))?\s*\]\])/g,
+  varname: 'layout, partial, locals, model',
+  strip: false,
+  append: true,
+  selfcontained: false,
+};*/
 
 app.set('views', __dirname+'/views');
 app.set('view engine', 'dot');
 app.engine('html', doT.__express);
-app.use(cookieParser('SimLab'));
 app.use(bodyParser.json({limit: '10mb'}));
 app.use(bodyParser.urlencoded({limit: '10mb', extended: true}));
 app.use(bodyParser.urlencoded({ extended: true }));
