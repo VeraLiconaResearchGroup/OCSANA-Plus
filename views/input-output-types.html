@@ -9,122 +9,679 @@
     </div>
 </div>
 
-<div class="section" style="height:80vh;">
+<div class="section" style="height:auto;min-height:85%;">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 faq-wrapper">
+            <div class="col-md-12 faq-wrapper">
                 <div class="panel-group" id="accordion2">
-                    <h3>Input Types</h3>
+                    <h3>Input / Output types</h3>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#input-algorun-superadam">
-                                algorun:superadam
+				superadam:PolynomialDynamicalSystemSet
                             </a>
                         </div>
                         <div id="input-algorun-superadam" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <div class="answer">Usage:</div>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
-                                <div class="answer">Example:</div>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
+					<div class="answer">Usage:</div>
+					<p>A Set of polynomial dynamical systems</p>
+                                        <div class="answer">Example:</div>
+					<div style="width:100%"><pre>
+{
+    "description": "Polynomial model"",
+    "fieldCardinality": 2,
+    "name": "priorModel",
+    "type": "PolynomialDynamicalSystemSet",
+    "updateRules": [
+	{
+	  "functions": [
+	      {
+		"inputVariables": ["x1","x2"],
+		"polynomialFunction": "x1*x2"
+	      }
+	    ],
+	  "target": "x1"
+	},
+	{
+	  "functions": [
+	      {
+		"inputVariables": ["x1"],
+		"polynomialFunction": "x1+1"
+	      },
+	      {
+		"inputVariables": ["x1","x2"],
+		"polynomialFunction": "x1*x2"
+	      }
+	    ],
+	  "target": "x2"
+	},
+	{
+	  "functions": [
+	      {
+		"inputVariables": ["x1","x2","x3"],
+		"polynomialFunction": "x3^2+x1"
+	      }
+	    ],
+	  "target": "x3"
+	},
+	{
+	  "functions": [
+	      {
+		"inputVariables": ["x1","x3"],
+		"polynomialFunction": "x3^2+x1+x2"
+	      }
+	    ],
+	  "target": "x4"
+	}
+      ]
+}
+					</pre></div>
                             </div>
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#input-compsysmed-mhs">
-                                compsysmed:mhs
+				superadam:DiscreteDynamicalSystemSet
                             </a>
                         </div>
                         <div id="input-compsysmed-mhs" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <div class="answer">Usage:</div>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
-                                <div class="answer">Example:</div>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
+					<div class="answer">Usage:</div>
+					<p>a set of discrete dynamical systems</p>
+                                        <div class="answer">Example:</div>
+					<pre>
+{
+	"type": "DiscreteDynamicalSystemSet",
+	"description": "a description",
+	"simulationName": "a name",
+	"updateRules": [
+	    {
+		"target": "CAP",
+		"functions": [
+		    {
+			"inputVariables": ["CAP","CAP"],
+			"transitionTable": [
+				[[0],0],
+				[[1],1]
+			    ]                         
+		    }
+		]
+	    },
+	    {
+		"target": "mRNA",
+		"functions": [
+		    {
+			"inputVariables": ["CAP","LacI","mRNA","mRNA"],
+			"transitionTable": [
+				[[0,0,0],0],
+				[[0,0,1],1],
+				[[0,1,0],0],
+				[[0,1,1],0],
+				[[0,2,0],0],
+				[[0,2,1],0],
+				[[1,0,0],1],
+				[[1,0,1],0],
+				[[1,1,0],0],
+				[[1,1,1],0],
+				[[1,2,0],0],
+				[[1,2,1],0]      
+			  ]
+		    }
+		 ]   
+	    },
+	    {
+		"target": "LacY",
+		"functions": [
+		    {
+			"inputVariables": ["mRNA","LacY","LacY"],
+			"transitionTable": [
+				[[0,0],0],
+				[[0,1],1],
+				[[1,0],1],
+				[[1,1],1]
+			   ]
+		     }
+		]
+	    },
+	    {
+		"target": "LacZ",
+		"functions": [
+		    {
+			"inputVariables": ["mRNA","LacZ","LacZ"],
+			"transitionTable": [
+				[[0,0],0],
+				[[0,1],1],
+				[[1,0],1],
+				[[1,1],1]
+			    ]
+		    }
+		]
+	    },
+	    {
+		"target": "LacI",
+		"functions": [
+		    {
+			"inputVariables": ["LacI","LacI"],
+			"transitionTable": [
+				[[0],0],
+				[[1],1],
+				[[2],2]
+			 ]
+		    }
+		]
+	    }
+	],
+	"variables": [
+	    {
+		"id": "CAP",
+		"states": [0,1],
+		"speed": 1
+	    },
+	    {
+		"id": "mRNA",
+		"states": [0,1],
+		"speed": 1
+	    },
+	    {
+		"id": "LacY",
+		"states": [0,1],
+		"speed": 1
+	    },
+	    {
+		"id": "LacZ",
+		"states": [0,1],
+		"speed": 1
+	    },
+	    {
+		"id": "LacI",
+		"states": [0,1,2],
+		"speed": 1
+	    }  
+	]
+}
+
+					</pre>
                             </div>
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#input-dna-sequence">
-                                dna-sequence
+				superadam:TimeSeriesSet
                             </a>
                         </div>
                         <div id="input-dna-sequence" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <div class="answer">Usage:</div>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
-                                <div class="answer">Example:</div>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
+				<div class="answer">Usage:</div>
+				<p>A set of time series</p>
+				<div class="answer">Example:</div>
+				<pre>
+{
+    "type": "timeSeriesSet",
+    "timeSeriesData": [
+	{
+	  "index": [],
+	  "matrix": [
+	      [1,0,0,0],
+	      [0,1,0,1],
+	      [1,1,0,0]
+	    ],
+	  "name": "wildtype experiment 1"
+	},
+	{
+	  "index": [],
+	  "matrix": [
+	      [1,1,0,0],
+	      [0,0,0,1],
+	      [1,0,0,0]
+	    ],
+	  "name": "wildtype experiment 2"
+	},
+	{
+	  "index": [1],
+	  "matrix": [
+	      [0,0,0,0],
+	      [0,0,0,1],
+	      [0,1,0,0],
+	      [0,0,0,1]
+	    ],
+	  "name": "knockout experiment 1"
+	},
+	{
+	  "index": [3],
+	  "matrix": [
+	      [0,1,0,0],
+	      [0,1,0,1],
+	      [0,1,0,1],
+	      [0,0,0,0]
+	    ],
+	  "name": "knockout experiment 2"
+	},
+	{
+	  "index": [2],
+	  "matrix": [
+	      [1,0,0,0],
+	      [0,0,0,1],
+	      [1,0,0,1],
+	      [0,0,0,0]
+	    ],
+	  "name": "knockout experiment 3"
+	}
+      ]
+  }
+				</pre>
                             </div>
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#input-algorun-custom">
-                                algorun:custom
+				superadam:DirectedGraph
                             </a>
                         </div>
                         <div id="input-algorun-custom" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <div class="answer">Usage:</div>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
-                                <div class="answer">Example:</div>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
+				<div class="answer">Usage:</div>
+				<p>a directed graph representation</p>
+				<div class="answer">Example:</div>
+				<pre>
+{
+    "description": "",
+    "fieldCardinality": 2,
+    "name": "priorReverseEngineeringNetwork",
+    "type": "directedGraph",
+    "edges": [
+	{
+	  "sources": [
+	      { "score": 0.5, "source": "x1" },
+	      { "score": 1, "source": "x2" },
+	      { "score": 1, "source": "x3" },
+	      { "score": 1, "source": "x4" }
+	    ],
+	  "target": "x1"
+	},
+	{
+	  "sources": [
+	      { "score": 1, "source": "x2" },
+	      { "score": 1, "source": "x4" }
+	    ],
+	  "target": "x2"
+	},
+	{
+	  "sources": [
+	      { "score": 0.5, "source": "x1" },
+	      { "score": 0.5, "source": "x2" }
+	    ],
+	  "target": "x3"
+	},
+	{
+	  "sources": [
+	      { "score": 0.33, "source": "x2" },
+	      { "score": 0.66, "source": "x3" }
+	    ],
+	  "target": "x4"
+	}
+    ]
+}
+				</pre>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6 faq-wrapper">
-                <div class="panel-group" id="accordion2">
-                    <h3>Output Types</h3>
-                    <div class="panel panel-default">
+	 	    <div class="panel panel-default">
                         <div class="panel-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#output-algorun-superadam">
-                                algorun:superadam
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#input-annotated-graph">
+				superadam:AnnotatedGraph
                             </a>
                         </div>
-                        <div id="output-algorun-superadam" class="accordion-body collapse">
+                        <div id="input-annotated-graph" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <div class="answer">Usage:</div>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
-                                <div class="answer">Example:</div>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
+				<div class="answer">Usage:</div>
+				<p>an annotated graph representation</p>
+				<div class="answer">Example:</div>
+				<pre>
+{
+	"type": "AnnotatedGraph",
+	"description": "Sample Annotated Graph",
+	"node": [                        
+	   {
+	      "id" : "node0",
+	      "label": " 0 0 0 0 0"
+	   },
+	   {
+	      "id" : "node1",
+	      "label": " 0 0 0 0 1"
+	   },
+	   {
+	      "id" : "node2",
+	      "label": " 0 0 0 0 2"
+	   },
+	   {
+	      "id" : "node3",
+	      "label": " 0 0 0 1 0"
+	   },
+	   {
+	      "id" : "node4",
+	      "label": " 0 0 0 1 1"
+	   },
+	   {
+	      "id" : "node5",
+	      "label": " 0 0 0 1 2"
+	   },
+	   {
+	      "id" : "node6",
+	      "label": " 0 0 1 0 0"
+	   },
+	   {
+	      "id" : "node7",
+	      "label": " 0 0 1 0 1"
+	   },
+	   {
+	      "id" : "node8",
+	      "label": " 0 0 1 0 2"
+	   },
+	   {
+	      "id" : "node9",
+	      "label": " 0 0 1 1 0"
+	   },
+	   {
+	      "id" : "node10",
+	      "label": " 0 0 1 1 1"
+	   },
+	   {
+	      "id" : "node11",
+	      "label": " 0 0 1 1 2"
+	   },
+	   {
+	      "id" : "node12",
+	      "label": " 0 1 0 0 0"
+	   },
+	   {
+	      "id" : "node13",
+	      "label": " 0 1 0 0 1"
+	   },
+	   {
+	      "id" : "node14",
+	      "label": " 0 1 0 0 2"
+	   },
+	   {
+	      "id" : "node15",
+	      "label": " 0 1 0 1 0"
+	   },
+	   {
+	      "id" : "node16",
+	      "label": " 0 1 0 1 1"
+	   },
+	   {
+	      "id" : "node17",
+	      "label": " 0 1 0 1 2"
+	   },
+	   {
+	      "id" : "node18",
+	      "label": " 0 1 1 0 0"
+	   },
+	   {
+	      "id" : "node19",
+	      "label": " 0 1 1 0 1"
+	   },
+	   {
+	      "id" : "node20",
+	      "label": " 0 1 1 0 2"
+	   },
+	   {
+	      "id" : "node21",
+	      "label": " 0 1 1 1 0"
+	   },
+	   {
+	      "id" : "node22",
+	      "label": " 0 1 1 1 1"
+	   },
+	   {
+	      "id" : "node23",
+	      "label": " 0 1 1 1 2"
+	   },
+	   {
+	      "id" : "node24",
+	      "label": " 1 0 0 0 0"
+	   },
+	   {
+	      "id" : "node25",
+	      "label": " 1 0 0 0 1"
+	   },
+	   {
+	      "id" : "node26",
+	      "label": " 1 0 0 0 2"
+	   },
+	   {
+	      "id" : "node27",
+	      "label": " 1 0 0 1 0"
+	   },
+	   {
+	      "id" : "node28",
+	      "label": " 1 0 0 1 1"
+	   },
+	   {
+	      "id" : "node29",
+	      "label": " 1 0 0 1 2"
+	   },
+	   {
+	      "id" : "node30",
+	      "label": " 1 0 1 0 0"
+	   },
+	   {
+	      "id" : "node31",
+	      "label": " 1 0 1 0 1"
+	   },
+	   {
+	      "id" : "node32",
+	      "label": " 1 0 1 0 2"
+	   },
+	   {
+	      "id" : "node33",
+	      "label": " 1 0 1 1 0"
+	   },
+	   {
+	      "id" : "node34",
+	      "label": " 1 0 1 1 1"
+	   },
+	   {
+	      "id" : "node35",
+	      "label": " 1 0 1 1 2"
+	   },
+	   {
+	      "id" : "node36",
+	      "label": " 1 1 0 0 0"
+	   },
+	   {
+	      "id" : "node37",
+	      "label": " 1 1 0 0 1"
+	   },
+	   {
+	      "id" : "node38",
+	      "label": " 1 1 0 0 2"
+	   },
+	   {
+	      "id" : "node39",
+	      "label": " 1 1 0 1 0"
+	   },
+	   {
+	      "id" : "node40",
+	      "label": " 1 1 0 1 1"
+	   },
+	   {
+	      "id" : "node41",
+	      "label": " 1 1 0 1 2"
+	   },
+	   {
+	      "id" : "node42",
+	      "label": " 1 1 1 0 0"
+	   },
+	   {
+	      "id" : "node43",
+	      "label": " 1 1 1 0 1"
+	   },
+	   {
+	      "id" : "node44",
+	      "label": " 1 1 1 0 2"
+	   },
+	   {
+	      "id" : "node45",
+	      "label": " 1 1 1 1 0"
+	   },
+	   {
+	      "id" : "node46",
+	      "label": " 1 1 1 1 1"
+	   },
+	   {
+	      "id" : "node47",
+	      "label": " 1 1 1 1 2"
+	   }
+       ],
+       "connection": [
+	    ["node0", "node0"],
+	    ["node1", "node1"], 
+	    ["node2","node2"],
+	    ["node3","node3"],
+	    ["node4","node4"],
+	    ["node5","node5"],
+	    ["node6","node6"],
+	    ["node7","node7"],
+	    ["node8","node8"],
+	    ["node9","node9"],
+	    ["node10","node10"],
+	    ["node11","node11"],
+	    ["node12","node21"],
+	    ["node13","node10"],
+	    ["node14","node11"],
+	    ["node15","node21"],
+	    ["node16","node10"],
+	    ["node17","node11"],
+	    ["node18","node21"],
+	    ["node19","node10"],
+	    ["node20","node11"],
+	    ["node21","node21"],
+	    ["node22","node10"],
+	    ["node23","node11"],
+	    ["node24","node36"],
+	    ["node25","node25"],
+	    ["node26","node26"],
+	    ["node27","node39"],
+	    ["node28","node28"],
+	    ["node29","node29"],
+	    ["node30","node42"],
+	    ["node31","node31"],
+	    ["node32","node32"],
+	    ["node33","node45"],
+	    ["node34","node34"],
+	    ["node35","node35"],
+	    ["node36","node33"],
+	    ["node37","node34"],
+	    ["node38","node35"],
+	    ["node39","node33"],
+	    ["node40","node34"],
+	    ["node41","node35"],
+	    ["node42","node33"],
+	    ["node43","node34"],
+	    ["node44","node35"],
+	    ["node45","node33"],
+	    ["node46","node34"],
+	    ["node47","node35"]
+       ]
+}
+				</pre>
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-default">
+	 	    <div class="panel panel-default">
                         <div class="panel-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#output-aligned-dna-sequence">
-                                aligned-dna-sequence
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#input-bdss">
+				superadam:BooleanDynamicalSystemSet
                             </a>
                         </div>
-                        <div id="output-aligned-dna-sequence" class="accordion-body collapse">
+                        <div id="input-bdss" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <div class="answer">Usage:</div>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
-                                <div class="answer">Example:</div>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
+				<div class="answer">Usage:</div>
+				<p>a set of boolean dynamical systems</p>
+				<div class="answer">Example:</div>
+				<pre>
+{
+	"type": "BooleanDynamicalSystemSet",
+	"description": "Sample Boolean Network",
+	"parameters": [
+	    {
+	    "id": "k1",
+	    "states": [0,1]
+	    },
+	    {
+	    "id": "k2",
+	    "states": [0,1]
+	    }
+	  ],
+	"updateRules": [
+	    {
+		"target": "x1",
+		"functions": [
+		    {
+			"inputVariables": ["k1","x3"],
+			"booleanFunction": "k1 & x3"
+		    }
+		]
+	    },
+	    {
+		"target": "x2",
+		"functions": [
+		    {
+			"inputVariables": ["x1" , "k2"],
+			"booleanFunction": "x1 | k2"
+		    }
+		]
+	    },
+	    {
+		"target": "x3",
+		"functions": [
+		    {
+			"inputVariables": ["x4","x2"],
+			"booleanFunction": "x2 & !x4"
+		    }
+		]
+	    },
+	    {
+		"target": "x4",
+		"functions": [
+		    {
+			"inputVariables": ["x2","k2"],
+			"booleanFunction": "x2 & k2"
+		    }
+		]
+	    }
+	],
+
+	"variables": [
+	    {
+		"id": "x1",
+		"states": [0,1]
+	    },
+	    {
+		"id": "x2",
+		"states": [0,1]
+	    },
+	    {
+		"id": "x3",
+		"states": [0,1]
+	    },
+	    {
+		"id": "x4",
+		"states": [0,1]
+	    }
+	]
+}
+				</pre>
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#output-algorun-custom">
-                                algorun:custom
-                            </a>
-                        </div>
-                        <div id="output-algorun-custom" class="accordion-body collapse">
-                            <div class="accordion-inner">
-                                <div class="answer">Usage:</div>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
-                                <div class="answer">Example:</div>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
-                            </div>
-                        </div>
-                    </div>
+
+
+
                 </div>
             </div>
         </div>
