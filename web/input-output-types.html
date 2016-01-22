@@ -73,60 +73,203 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#input-algorun-superadam">
-										algorun:superadam
+										superadam:PolynomialDynamicalSystemSet
 									</a>
 								</div>
 								<div id="input-algorun-superadam" class="accordion-body collapse">
 									<div class="accordion-inner">
 										<div class="answer">Usage:</div>
-										<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
+										<p>A Set of polynomial dynamical systems</p>
                                         <div class="answer">Example:</div>
-										<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
+					<div style="width:100%"><pre>
+{
+    "description": "Polynomial model"",
+    "fieldCardinality": 2,
+    "name": "priorModel",
+    "type": "PolynomialDynamicalSystemSet",
+    "updateRules": [
+	{
+	  "functions": [
+	      {
+		"inputVariables": ["x1","x2"],
+		"polynomialFunction": "x1*x2"
+	      }
+	    ],
+	  "target": "x1"
+	},
+	{
+	  "functions": [
+	      {
+		"inputVariables": ["x1"],
+		"polynomialFunction": "x1+1"
+	      },
+	      {
+		"inputVariables": ["x1","x2"],
+		"polynomialFunction": "x1*x2"
+	      }
+	    ],
+	  "target": "x2"
+	},
+	{
+	  "functions": [
+	      {
+		"inputVariables": ["x1","x2","x3"],
+		"polynomialFunction": "x3^2+x1"
+	      }
+	    ],
+	  "target": "x3"
+	},
+	{
+	  "functions": [
+	      {
+		"inputVariables": ["x1","x3"],
+		"polynomialFunction": "x3^2+x1+x2"
+	      }
+	    ],
+	  "target": "x4"
+	}
+      ]
+}
+										</pre></div>
 									</div>
 								</div>
 							</div>
                             <div class="panel panel-default">
 								<div class="panel-heading">
 									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#input-compsysmed-mhs">
-										compsysmed:mhs
+										superadam:DiscreteDynamicalSystemSet
 									</a>
 								</div>
 								<div id="input-compsysmed-mhs" class="accordion-body collapse">
 									<div class="accordion-inner">
 										<div class="answer">Usage:</div>
-										<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
+										<p>a set of discrete dynamical systems</p>
                                         <div class="answer">Example:</div>
-										<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
+										<pre>
+										</pre>
 									</div>
 								</div>
 							</div>
                             <div class="panel panel-default">
 								<div class="panel-heading">
 									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#input-dna-sequence">
-										dna-sequence
+										superadam:TimeSeriesSet
 									</a>
 								</div>
 								<div id="input-dna-sequence" class="accordion-body collapse">
 									<div class="accordion-inner">
 										<div class="answer">Usage:</div>
-										<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
+										<p>A set of time series</p>
                                         <div class="answer">Example:</div>
-										<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
+										<pre>
+{
+    "type": "timeSeriesSet",
+    "timeSeriesData": [
+	{
+	  "index": [],
+	  "matrix": [
+	      [1,0,0,0],
+	      [0,1,0,1],
+	      [1,1,0,0]
+	    ],
+	  "name": "wildtype experiment 1"
+	},
+	{
+	  "index": [],
+	  "matrix": [
+	      [1,1,0,0],
+	      [0,0,0,1],
+	      [1,0,0,0]
+	    ],
+	  "name": "wildtype experiment 2"
+	},
+	{
+	  "index": [1],
+	  "matrix": [
+	      [0,0,0,0],
+	      [0,0,0,1],
+	      [0,1,0,0],
+	      [0,0,0,1]
+	    ],
+	  "name": "knockout experiment 1"
+	},
+	{
+	  "index": [3],
+	  "matrix": [
+	      [0,1,0,0],
+	      [0,1,0,1],
+	      [0,1,0,1],
+	      [0,0,0,0]
+	    ],
+	  "name": "knockout experiment 2"
+	},
+	{
+	  "index": [2],
+	  "matrix": [
+	      [1,0,0,0],
+	      [0,0,0,1],
+	      [1,0,0,1],
+	      [0,0,0,0]
+	    ],
+	  "name": "knockout experiment 3"
+	}
+      ]
+  }
+										</pre>
 									</div>
 								</div>
 							</div>
                             <div class="panel panel-default">
 								<div class="panel-heading">
 									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#input-algorun-custom">
-										algorun:custom
+										superadam:DirectedGraph
 									</a>
 								</div>
 								<div id="input-algorun-custom" class="accordion-body collapse">
 									<div class="accordion-inner">
 										<div class="answer">Usage:</div>
-										<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
+										<p>a directed graph representation</p>
                                         <div class="answer">Example:</div>
-										<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque</p>
+										<pre>
+{
+    "description": "",
+    "fieldCardinality": 2,
+    "name": "priorReverseEngineeringNetwork",
+    "type": "directedGraph",
+    "edges": [
+	{
+	  "sources": [
+	      { "score": 0.5, "source": "x1" },
+	      { "score": 1, "source": "x2" },
+	      { "score": 1, "source": "x3" },
+	      { "score": 1, "source": "x4" }
+	    ],
+	  "target": "x1"
+	},
+	{
+	  "sources": [
+	      { "score": 1, "source": "x2" },
+	      { "score": 1, "source": "x4" }
+	    ],
+	  "target": "x2"
+	},
+	{
+	  "sources": [
+	      { "score": 0.5, "source": "x1" },
+	      { "score": 0.5, "source": "x2" }
+	    ],
+	  "target": "x3"
+	},
+	{
+	  "sources": [
+	      { "score": 0.33, "source": "x2" },
+	      { "score": 0.66, "source": "x3" }
+	    ],
+	  "target": "x4"
+	}
+    ]
+}
+										</pre>
 									</div>
 								</div>
 							</div>
