@@ -239,6 +239,93 @@ ATGCATCATGCGCCAT</pre></div>
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#input-bdss">
+				superadam:BooleanDynamicalSystemSet
+                            </a>
+                        </div>
+                        <div id="input-bdss" class="accordion-body collapse">
+                            <div class="accordion-inner">
+				<div class="answer">Usage:</div>
+				<p>a set of boolean dynamical systems</p>
+				<div class="answer">Example:</div>
+				<pre>
+{
+	"type": "BooleanDynamicalSystemSet",
+	"description": "Sample Boolean Network",
+	"parameters": [
+	    {
+	    "id": "k1",
+	    "states": [0,1]
+	    },
+	    {
+	    "id": "k2",
+	    "states": [0,1]
+	    }
+	  ],
+	"updateRules": [
+	    {
+		"target": "x1",
+		"functions": [
+		    {
+			"inputVariables": ["k1","x3"],
+			"booleanFunction": "k1 & x3"
+		    }
+		]
+	    },
+	    {
+		"target": "x2",
+		"functions": [
+		    {
+			"inputVariables": ["x1" , "k2"],
+			"booleanFunction": "x1 | k2"
+		    }
+		]
+	    },
+	    {
+		"target": "x3",
+		"functions": [
+		    {
+			"inputVariables": ["x4","x2"],
+			"booleanFunction": "x2 & !x4"
+		    }
+		]
+	    },
+	    {
+		"target": "x4",
+		"functions": [
+		    {
+			"inputVariables": ["x2","k2"],
+			"booleanFunction": "x2 & k2"
+		    }
+		]
+	    }
+	],
+
+	"variables": [
+	    {
+		"id": "x1",
+		"states": [0,1]
+	    },
+	    {
+		"id": "x2",
+		"states": [0,1]
+	    },
+	    {
+		"id": "x3",
+		"states": [0,1]
+	    },
+	    {
+		"id": "x4",
+		"states": [0,1]
+	    }
+	]
+}
+				</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#input-dna-sequence">
 				superadam:TimeSeriesSet
                             </a>
@@ -619,93 +706,6 @@ ATGCATCATGCGCCAT</pre></div>
 	    ["node46","node34"],
 	    ["node47","node35"]
        ]
-}
-				</pre>
-                            </div>
-                        </div>
-                    </div>
-	 	    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#input-bdss">
-				superadam:BooleanDynamicalSystemSet
-                            </a>
-                        </div>
-                        <div id="input-bdss" class="accordion-body collapse">
-                            <div class="accordion-inner">
-				<div class="answer">Usage:</div>
-				<p>a set of boolean dynamical systems</p>
-				<div class="answer">Example:</div>
-				<pre>
-{
-	"type": "BooleanDynamicalSystemSet",
-	"description": "Sample Boolean Network",
-	"parameters": [
-	    {
-	    "id": "k1",
-	    "states": [0,1]
-	    },
-	    {
-	    "id": "k2",
-	    "states": [0,1]
-	    }
-	  ],
-	"updateRules": [
-	    {
-		"target": "x1",
-		"functions": [
-		    {
-			"inputVariables": ["k1","x3"],
-			"booleanFunction": "k1 & x3"
-		    }
-		]
-	    },
-	    {
-		"target": "x2",
-		"functions": [
-		    {
-			"inputVariables": ["x1" , "k2"],
-			"booleanFunction": "x1 | k2"
-		    }
-		]
-	    },
-	    {
-		"target": "x3",
-		"functions": [
-		    {
-			"inputVariables": ["x4","x2"],
-			"booleanFunction": "x2 & !x4"
-		    }
-		]
-	    },
-	    {
-		"target": "x4",
-		"functions": [
-		    {
-			"inputVariables": ["x2","k2"],
-			"booleanFunction": "x2 & k2"
-		    }
-		]
-	    }
-	],
-
-	"variables": [
-	    {
-		"id": "x1",
-		"states": [0,1]
-	    },
-	    {
-		"id": "x2",
-		"states": [0,1]
-	    },
-	    {
-		"id": "x3",
-		"states": [0,1]
-	    },
-	    {
-		"id": "x4",
-		"states": [0,1]
-	    }
-	]
 }
 				</pre>
                             </div>
