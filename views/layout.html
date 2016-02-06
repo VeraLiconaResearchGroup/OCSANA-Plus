@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>AlgoRun</title>
+        <title>{{=it.title}}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
@@ -27,7 +27,7 @@
 	        <div class="container">
 		        <nav id="mainmenu" class="mainmenu">
 					<ul>
-						<li class="logo-wrapper"><a href="/"><img src="img/algorun-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
+						<li class="logo-wrapper"><a href="/"><img src="img/algorun-logo.png" alt="AlgoRun logo"></a></li>
 						<li {{=it.home_tab}}>
 							<a href="/">Home</a>
 						</li>
@@ -39,6 +39,9 @@
 						</li>
                         <li {{=it.submit_tab}}>
 							<a href="/submit-algorithm">Submit Algorithm</a>
+						</li>
+                        <li {{=it.algopiper_tab}}>
+							<a href="/algopiper">AlgoPiper</a>
 						</li>
 					</ul>
 				</nav>

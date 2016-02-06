@@ -4,27 +4,17 @@ var express = require('express')
   , pub = __dirname+'/public'
   , view = __dirname+'/views';
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 var multer = require('multer');
 var upload = multer();
 var engine = require('express-dot-engine');
-
-/*engine.settings.dot = {
-  evaluate:    /\[\[([\s\S]+?)\]\]/g,
-  interpolate: /\[\[=([\s\S]+?)\]\]/g,
-  encode:      /\[\[!([\s\S]+?)\]\]/g,
-  use:         /\[\[#([\s\S]+?)\]\]/g,
-  define:      /\[\[##\s*([\w\.$]+)\s*(\:|=)([\s\S]+?)#\]\]/g,
-  conditional: /\[\[\?(\?)?\s*([\s\S]*?)\s*\]\]/g,
-  iterate:     /\[\[~\s*(?:\]\]|([\s\S]+?)\s*\:\s*([\w$]+)\s*(?:\:\s*([\w$]+))?\s*\]\])/g,
-  varname: 'layout, partial, locals, model',
-  strip: false,
-  append: true,
-  selfcontained: false,
-};*/
+var uuid = require('node-uuid');
+var request = require('request');
 
 app.set('views', __dirname+'/views');
 app.set('view engine', 'dot');
 app.engine('html', doT.__express);
+app.use(cookieParser('AlgoPiper'));
 app.use(bodyParser.json({limit: '10mb'}));
 app.use(bodyParser.urlencoded({limit: '10mb', extended: true}));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -69,6 +59,34 @@ app.get('/submit-algorithm', function (req, res) {
     
     var templateData = {title: "Submit Algorithm", submit_tab: "class='active'"};
 	res.render('submit-algorithm.html', templateData);
+});
+
+app.get('/try-algopiper', function(req, res){
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.status = 200;
+    
+    var docker_image = 'algorun/algopiper';
+    var node_id = req.cookies['AlgoPiper'];
+    if(node_id == undefined){
+        node_id = uuid.v4();
+        res.cookie('AlgoPiper', node_id);
+    }
+    
+    request.post('http://manager.algorun.org/api/v1/deploy', {form:{'docker_image': docker_image, 'node_id': node_id}}, function(error, response, body){
+        res.send(body);
+    });
+});
+app.get('/algopiper', function (req, res) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.status = 200;
+    
+    var templateData = {title: "AlgoPiper", algopiper_tab: "class='active'"};
+    if(req.cookies['AlgoPiper'] == undefined){
+        res.cookie('AlgoPiper', uuid.v4());
+    }
+	res.render('algopiper.html', templateData);
 });
 
 app.get('/contact-us', function (req, res) {
