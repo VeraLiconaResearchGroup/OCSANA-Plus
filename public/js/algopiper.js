@@ -2,13 +2,15 @@ Date.prototype.add_millis = function(n) {
     this.setMilliseconds(this.getMilliseconds()+n);
     return this;
 };
-var now = new Date();
-var time_elapsed = now - new Date(JSON.parse(localStorage.getItem('algopiper-container'))['start_time']);
-var two_hours = 2 * 60 * 60 * 1000;
-if(time_elapsed < two_hours){
-    var time_remaining = two_hours - time_elapsed;
-    var countUntil = now.add_millis(time_remaining);
-    $('#defaultCountdown').countdown({until: countUntil});
+if(localStorage.getItem('algopiper-container') != undefined){
+    var now = new Date();
+    var time_elapsed = now - new Date(JSON.parse(localStorage.getItem('algopiper-container'))['start_time']);
+    var two_hours = 2 * 60 * 60 * 1000;
+    if(time_elapsed < two_hours){
+        var time_remaining = two_hours - time_elapsed;
+        var countUntil = now.add_millis(time_remaining);
+        $('#defaultCountdown').countdown({until: countUntil});
+    }
 }
 
 $('#doc-1').click(function(){
