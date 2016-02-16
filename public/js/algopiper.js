@@ -66,7 +66,7 @@ $('#deploy-btn').click(function(){
                        window.open(data['endpoint'], '_blank');
                    }
                    localStorage.setItem('algopiper-container', JSON.stringify({'start_time': new Date, 'endpoint': data['endpoint']}));
-                   var now = Date();
+                   var now = new Date();
                    var two_hours = 2 * 60 * 60 * 1000;
                    var countUntil = now.add_millis(two_hours);
                    $('#defaultCountdown').countdown({until: countUntil});
