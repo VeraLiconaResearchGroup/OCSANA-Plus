@@ -5,7 +5,7 @@ Date.prototype.add_millis = function(n) {
 if(localStorage.getItem('algopiper-container') != undefined){
     var now = new Date();
     var time_elapsed = now - new Date(JSON.parse(localStorage.getItem('algopiper-container'))['start_time']);
-    var two_hours = 2 * 60 * 60 * 1000;
+    var two_hours = 24 * 60 * 60 * 1000;
     if(time_elapsed < two_hours){
         var time_remaining = two_hours - time_elapsed;
         var countUntil = now.add_millis(time_remaining);
@@ -67,7 +67,7 @@ $('#deploy-btn').click(function(){
                    }
                    localStorage.setItem('algopiper-container', JSON.stringify({'start_time': new Date, 'endpoint': data['endpoint']}));
                    var now = new Date();
-                   var two_hours = 2 * 60 * 60 * 1000;
+                   var two_hours = 24 * 60 * 60 * 1000;
                    var countUntil = now.add_millis(two_hours);
                    $('#defaultCountdown').countdown({until: countUntil});
                }
