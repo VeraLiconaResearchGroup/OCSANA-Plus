@@ -61,34 +61,6 @@ app.get('/submit-algorithm', function (req, res) {
 	res.render('submit-algorithm.html', templateData);
 });
 
-app.get('/try-algopiper', function(req, res){
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    res.status = 200;
-    
-    var docker_image = 'algorun/algopiper';
-    var node_id = req.cookies['AlgoPiper'];
-    if(node_id == undefined){
-        node_id = uuid.v4();
-        res.cookie('AlgoPiper', node_id);
-    }
-    
-    request.post('http://manager.algorun.org/api/v1/deploy', {form:{'docker_image': docker_image, 'node_id': node_id}}, function(error, response, body){
-        res.send(body);
-    });
-});
-app.get('/algopiper', function (req, res) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    res.status = 200;
-    
-    var templateData = {title: "AlgoPiper", algopiper_tab: "class='active'"};
-    if(req.cookies['AlgoPiper'] == undefined){
-        res.cookie('AlgoPiper', uuid.v4());
-    }
-	res.render('algopiper.html', templateData);
-});
-
 app.get('/contact-us', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
