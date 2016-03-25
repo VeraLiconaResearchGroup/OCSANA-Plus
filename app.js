@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var multer = require('multer');
 var upload = multer();
-var engine = require('express-dot-engine');
 var uuid = require('node-uuid');
 var request = require('request');
 
