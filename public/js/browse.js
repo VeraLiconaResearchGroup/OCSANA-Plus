@@ -123,7 +123,7 @@ function md5(str) {
     S44 = 21;
 
   //str = utf8_encode(str);
-    
+
   x = convertToWordArray(str);
   a = 0x67452301;
   b = 0xEFCDAB89;
@@ -234,9 +234,9 @@ search.addWidget(
                 for(i=0; i<data.algo_authors.length;i++){
 			if (idx_auth>1) { algo_authors += ", " }
 			if(data.algo_authors[i].personal_website != undefined && data.algo_authors[i].personal_website != ""){
-				algo_authors += "<a style='text-decoration:none;' href='" + data.algo_authors[i].personal_website + "' target='_blank'>"+data.algo_authors[i].name+ "</a>&nbsp&nbsp";    
+				algo_authors += "<a style='text-decoration:none;' href='" + data.algo_authors[i].personal_website + "' target='_blank'>"+data.algo_authors[i].name+ "</a>&nbsp&nbsp";
 			}else{
-				algo_authors += data.algo_authors[i].name;    
+				algo_authors += data.algo_authors[i].name;
 			}
 			idx_auth+=1;
                 }
@@ -250,7 +250,7 @@ search.addWidget(
                 });
 		algo_keywords += '</span>'
                 var algo_link = data.url;
-                
+
                 var result_card = "<div class='col-md-4 col-sm-6'> \
 	        			<div class='service-wrapper'> \
 		        			<h2 class='search'>" + algo_name + "</h2>";
