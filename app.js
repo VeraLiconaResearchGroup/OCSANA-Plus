@@ -50,6 +50,14 @@ app.get('/documentation', function (req, res) {
 	res.render('documentation.html', templateData);
 });
 
+app.get('/publications', function (req, res) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.status = 200;
+    
+    var templateData = {title: "Publications", pub_tab: "class='active'"};
+	res.render('publications.html', templateData);
+});
 
 app.get('/submit-algorithm', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
