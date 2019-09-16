@@ -43,7 +43,7 @@ em {
     background-color: #FFFF00;
 }
 
-/* AlgoRun defined styles */
+/* OCSANA+ defined styles */
 .banner {
   background-color: #3e5fda;
   width:100%;
@@ -1920,7 +1920,7 @@ span.color-red {
 /*--------------------------------------------------------------------------
 +	Homepage Slider Style (modified sequencejs CSS). Sorry, no LESS here
 --------------------------------------------------------------------------*/
-.algorun-title {
+.ocsana-title {
     margin-left: 50px;
     padding-top: 30px;
     width: 48%;

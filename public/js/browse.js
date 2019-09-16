@@ -1,7 +1,7 @@
 var search = instantsearch({
     appId: 'CPO3M6SOV0',
     apiKey: '52f439effa428d4e07de53955207887d',
-    indexName: 'dev_AlgoRun',
+    indexName: 'dev_OCSANA',
     urlSync: true
 });
 

@@ -28,7 +28,7 @@ app.get('/', function (req, res) {
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     res.status = 200;
     
-    var templateData = {title: "AlgoRun", home_tab: "class='active'"};
+    var templateData = {title: "OCSANA+", home_tab: "class='active'"};
 	res.render('index.html', templateData);
 });
 
