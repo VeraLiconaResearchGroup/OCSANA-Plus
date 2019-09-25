@@ -1,19 +1,14 @@
-OCSANA+ user guide
+OCSANA+
 =======================================
-
-Another simple header
-=====================
-
-Here is some text explaining some very complicated stuff
-
-Guide
-^^^^^
-
+This is a guide for OCSANA+, a Cytoscape app for targeted control in network analysis
 
 .. toctree::
+   :caption: User Guide
    :maxdepth: 2
-   :caption: Contents:
-
+   install
+   ocsana
+   tutorials
+   
 
 
 Indices and tables
