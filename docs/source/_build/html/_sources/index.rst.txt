@@ -8,13 +8,9 @@ This is a guide for OCSANA+, a Cytoscape app for targeted control in network ana
 
    install
    ocsana
-   tutorials
+   fc
+   sfa
    
 
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
