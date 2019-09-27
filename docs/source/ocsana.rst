@@ -34,7 +34,7 @@ and which nodes to build paths from (source nodes to targets, source nodes to of
 Node Selection Mode
 ....................
 
-Select whether the user will enter a string of source, target, and off target nodes, 
+Select whether you will enter a string of source, target, and off target nodes, 
 or will click-to-select the nodes. 
 
 ........................
