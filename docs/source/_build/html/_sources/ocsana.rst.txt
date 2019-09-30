@@ -194,4 +194,4 @@ Saving Results
 By clicking  'Save Report', you can save a text file that contains both your OCSANA configuration settings
 and results from your OCSANA run.
 
-.. image:: _static/text_report.png
+.. image:: _static/text_report.PNG
