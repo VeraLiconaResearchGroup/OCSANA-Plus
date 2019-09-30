@@ -3,7 +3,7 @@ Walk-Through Example: Cell Fate Specification in Ascidian Embryo
 ===================================================================
 
 In `Kobayashi et al., 2018 <https://www.ncbi.nlm.nih.gov/pubmed/30240747>`_, 
-the authors performed FC analysis from `\Mochizuki et al2013 <https://www.ncbi.nlm.nih.gov/pubmed/23774067>`_ on a gene regulatory 
+the authors performed FC analysis from `\Mochizuki et al., 2013 <https://www.ncbi.nlm.nih.gov/pubmed/23774067>`_ on a gene regulatory 
 network (GRN) of seven tissues that specifies cell fates in embryos of the ascidian 
 Ciona intestinalis (type A; also called Ciona robusta). After performing FC analysis, 
 the authors identified five key molecules. By controlling the activities of these key molecules, 
@@ -13,8 +13,10 @@ reproduced.
 In this example, we show how OCSANA+ can reproduce the FC 
 analysis in addition to the results from control experiments in Ascidian embryos.
 Additionally, we explore how the extended Feedback Vertex Set Control (FC) with source 
-nodes (`Zanudo et al 2017 <https://www.ncbi.nlm.nih.gov/pubmed/28655847>`_) and OCSANA functionalities could increase 
+nodes (`Zanudo et al.,  2017 <https://www.ncbi.nlm.nih.gov/pubmed/28655847>`_) and OCSANA functionalities could increase 
 the accuracy of simulated results.
+
+You can download the .sif file used in this tutorial `here <_static/files/kobayashi.sif>`_
 
 
 ..........................................................

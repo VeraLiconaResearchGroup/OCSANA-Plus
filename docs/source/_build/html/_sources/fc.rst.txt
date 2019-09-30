@@ -48,8 +48,9 @@ Bound FVS discovery
 .........................
 
 For larger, more complex networks (those with many cycles), FVS discovery can
-be time/memory consuming. We suggest limiting the number of FVSes discovered,
-with a maximum of 50. 
+be time/memory consuming. We suggest limiting the number of FVSs runs,
+with a maximum of 50. Please note that the number of FVSes returned may be less than the set boundary,
+as there may be fewer FVSes in the network. 
 
 After configuring your run, select "Identify Feedback Vertex Set Control Set"
 
