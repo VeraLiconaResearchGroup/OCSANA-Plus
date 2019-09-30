@@ -22,11 +22,11 @@ you can select Feedback Vertex Set Control from the main toolbar>Apps>OCSANA
 ++++++++++++++++++++++++++++
 Configuring your FC Run
 ++++++++++++++++++++++++++++
-Two   FC   algorithms   areimplemented  in  OCSANA+.  
+Two   FC   algorithms   are implemented  in  OCSANA+.  
 Mochizuki  et  al.  (2013)  mathematically identified the 
 FC set to be comprised of the network’s minimal FVS. 
 The FVS of a network is defined as the minimal set of nodes 
-whose removalwould leave a graph without cycles. 
+whose removal would leave a graph without cycles. 
 Later, an extended FC control version adding the the 
 network’s source nodes was been proposed by Zañudo et al. (2017).
 
