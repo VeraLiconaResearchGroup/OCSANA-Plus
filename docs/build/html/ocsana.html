@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Computing Optimal Combinations of Intervention with OCSANA &mdash; OCSANA_Plus 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Identifying Minimal Feedback Vertex Set Control (FC) Sets" href="fc.html" />
+    <link rel="prev" title="Installing OCSANA+" href="install.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OCSANA_Plus
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installing OCSANA+</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Computing Optimal Combinations of Intervention with OCSANA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-ocsana-in-cytoscape">Running OCSANA in Cytoscape</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-your-ocsana-run">Configuring your OCSANA Run</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#configure-network-processing-pink-panel">Configure Network Processing (pink panel)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuring-edge-sign-purple-panel">Configuring Edge Sign (purple panel)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configure-path-finding-blue-panel">Configure Path Finding (blue panel)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configure-combinations-of-interventions-cis-with-minimal-hitting-sets-discovery-green-panel">Configure Combinations of Interventions (CIs) with Minimal Hitting Sets Discovery (green panel)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ocsana-results">OCSANA Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cis">CIs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#paths-to-targets">Paths to Targets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saving-results">Saving Results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fc.html">Identifying Minimal Feedback Vertex Set Control (FC) Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sfa.html">Performing Topological Estimation of Signal Flow with Signal Flow Analysis (SFA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html">Walk-Through Example: Cell Fate Specification in Ascidian Embryo</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OCSANA_Plus</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Computing Optimal Combinations of Intervention with OCSANA</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/ocsana.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="computing-optimal-combinations-of-intervention-with-ocsana">
+<h1>Computing Optimal Combinations of Intervention with OCSANA<a class="headerlink" href="#computing-optimal-combinations-of-intervention-with-ocsana" title="Permalink to this headline">¶</a></h1>
+<p>OCSANA (Optimal Combinations of Interventions from Network Analysis), originally
+introduced in <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/23626000">Vera-Licona et al., 2013</a>, identifies and prioritizes optimal minimal
+combinations of interventions (CIs) that disrupt the elementary paths from selected source nodes
+to the specified target nodes. When indicated by the user, OCSANA seeks to additionally minimize
+the side-effects that CIs can cause on specified off-target nodes.</p>
+<div class="section" id="running-ocsana-in-cytoscape">
+<h2>Running OCSANA in Cytoscape<a class="headerlink" href="#running-ocsana-in-cytoscape" title="Permalink to this headline">¶</a></h2>
+<p>After installation of OCSANA+ and loading of a network,
+the OCSANA configuration menu will appear as a tab in the Cytoscape Control Panel (left panel).</p>
+<img alt="_images/oconfig.png" src="_images/oconfig.png" />
+<div class="section" id="configuring-your-ocsana-run">
+<h3>Configuring your OCSANA Run<a class="headerlink" href="#configuring-your-ocsana-run" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="configure-network-processing-pink-panel">
+<h4>Configure Network Processing (pink panel)<a class="headerlink" href="#configure-network-processing-pink-panel" title="Permalink to this headline">¶</a></h4>
+<p>This subpanel allows users to select how OCSANA processes your network (which columns to read for node names)
+and which nodes to build paths from (source nodes to targets, source nodes to off-targets).</p>
+<div class="section" id="node-selection-mode">
+<h5>Node Selection Mode<a class="headerlink" href="#node-selection-mode" title="Permalink to this headline">¶</a></h5>
+<p>Select whether you will enter a string of source, target, and off target nodes,
+or will click-to-select the nodes.</p>
+</div>
+<div class="section" id="select-node-name-column">
+<h5>Select Node Name Column<a class="headerlink" href="#select-node-name-column" title="Permalink to this headline">¶</a></h5>
+<p>This option allows users to select which column of the node
+attribute table will be used to identify network nodes.</p>
+</div>
+<div class="section" id="source-nodes">
+<h5>Source Nodes<a class="headerlink" href="#source-nodes" title="Permalink to this headline">¶</a></h5>
+<p>The Source nodes section allows the user to specify the source nodes (i.e. the nodes from
+which the signals’ cascades will start). The nodes can be selected manually from the list of
+nodes appearing in this section or by copying and pasting the list of desired nodes in the
+dialog window after clicking on the set source nodes button.</p>
+</div>
+<div class="section" id="target-nodes">
+<h5>Target Nodes<a class="headerlink" href="#target-nodes" title="Permalink to this headline">¶</a></h5>
+<p>The Target nodessection allows the user to select the target nodes (i.e. the nodes intended to
+be blocked). The nodes can be selected manually from the list of nodes appearing in this
+section or by copying and pasting a list of nodes in the dialog window after clicking on the set
+of target nodes button.</p>
+</div>
+<div class="section" id="off-target-nodes">
+<h5>Off-target Nodes<a class="headerlink" href="#off-target-nodes" title="Permalink to this headline">¶</a></h5>
+<p>The off-target nodes section is an optional column for the user that allows to select offtarget (side-effect) nodes, that is, nodes that are preferred to be avoided when constructing CIs. A CI that
+contains a node from such given list, will then receive a penalty. The nodes can be selected
+manually from the list of nodes appearing in this column or by copying and pasting the list of
+nodes in the dialog window after clicking on the set side-effects nodes button.</p>
+</div>
+</div>
+<div class="section" id="configuring-edge-sign-purple-panel">
+<h4>Configuring Edge Sign (purple panel)<a class="headerlink" href="#configuring-edge-sign-purple-panel" title="Permalink to this headline">¶</a></h4>
+<p>To Configure edge signs, please include an “interaction” column that specifies positive edges as “activates”
+and negative edges as “inhibits.” Otherwise, all edges will be considered positive.</p>
+</div>
+<div class="section" id="configure-path-finding-blue-panel">
+<h4>Configure Path Finding (blue panel)<a class="headerlink" href="#configure-path-finding-blue-panel" title="Permalink to this headline">¶</a></h4>
+<p>This panel allows users to select which algorithm should be used for finding paths between source nodes and target/off-target nodes.</p>
+<div class="section" id="shortest-paths">
+<h5>Shortest Paths<a class="headerlink" href="#shortest-paths" title="Permalink to this headline">¶</a></h5>
+<p>searches for the paths with the shortest length among all the elementary paths
+connecting source nodes to target nodes and source nodes to side-effect nodes (via Dijkstra’s
+algorithm).</p>
+</div>
+<div class="section" id="all-non-self-intersecting-paths">
+<h5>All Non-Self-intersecting paths<a class="headerlink" href="#all-non-self-intersecting-paths" title="Permalink to this headline">¶</a></h5>
+<p>considers all the paths, between specified nodes, that do not
+contain loops (self-intersections).</p>
+</div>
+</div>
+<div class="section" id="configure-combinations-of-interventions-cis-with-minimal-hitting-sets-discovery-green-panel">
+<h4>Configure Combinations of Interventions (CIs) with Minimal Hitting Sets Discovery (green panel)<a class="headerlink" href="#configure-combinations-of-interventions-cis-with-minimal-hitting-sets-discovery-green-panel" title="Permalink to this headline">¶</a></h4>
+<p>This panel allows you to choose which MHS solving algorithm you would like to use to discover CIs.
+A CI is as a set of nodes such that each elementary path (a path from
+user-selected source to target nodes) contains at least one node from this set.
+This CI set indicates the nodes to be intervened to disrupt all the identified elementary paths.
+Optimality of CIs is defined in terms of a heuristic scoring. The scoring of a node is based on
+(i) the lengths of the paths from the node of interest to the targets,
+(ii) the type of effect on target nodes (e.g. activation/inhibition effect),
+(iii) side effects with respect to off-target nodes, (iv) the number of elementary
+paths in which the node participates and (v) the number of targets that such node
+can reach simultaneously.</p>
+<p>The algorithms included are:</p>
+<ul class="simple">
+<li>Minimal-to-Maximal Conversion Search (MMCS)</li>
+<li>Reverse Search (RS)</li>
+<li>Berge’s algorithm</li>
+<li>Greedy Heuristic Algorithm</li>
+</ul>
+<p>If you are interested in descriptions of these algorithms, please see
+the <cite>OCSANA+ supplementary file</cite> or <a class="reference external" href="https://epubs.siam.org/doi/abs/10.1137/15M1055024">Gainer-Dewar and Vera-Licona, 2017</a>.</p>
+<div class="section" id="allow-sources-in-cis">
+<h5>Allow sources in CIs<a class="headerlink" href="#allow-sources-in-cis" title="Permalink to this headline">¶</a></h5>
+<p>Select this option if you would like source nodes to be considered in CIs</p>
+</div>
+<div class="section" id="bound-thread-count">
+<h5>Bound thread count<a class="headerlink" href="#bound-thread-count" title="Permalink to this headline">¶</a></h5>
+<p>Select this option if you would like to bind the number of threads used to CI Discovery
+if selected, enter the number of threads to be used in the below box (min:1,max:16)</p>
+</div>
+<div class="section" id="bound-ci-size">
+<h5>Bound CI size<a class="headerlink" href="#bound-ci-size" title="Permalink to this headline">¶</a></h5>
+<p>Select this option if you would like to bind the number of nodes that can be in a CI
+if selected, enter the max CI size in the below box (min:1,max:20)</p>
+</div>
+<div class="section" id="additional-configuration-option-of-greedy-heuristic-algorithm">
+<h5>Additional configuration option of Greedy Heuristic Algorithm<a class="headerlink" href="#additional-configuration-option-of-greedy-heuristic-algorithm" title="Permalink to this headline">¶</a></h5>
+<p>For the Greedy Heuristic Algorithm, you may also set a bound on the number of candidates
+(the number of potential CIs).
+If selected, enter the number below. Note this is converted to millions (if you input “1”, OCSANA will generate 1,000,000 candidates)</p>
+<p>After configuring your OCSANA Run, click ‘Run OCSANA Calculations’</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ocsana-results">
+<h2>OCSANA Results<a class="headerlink" href="#ocsana-results" title="Permalink to this headline">¶</a></h2>
+<p>After the OCSANA run has completed, the results will be displayed in the OCSANA tabe of the
+Cytoscape Results Panel (right panel)</p>
+<div class="section" id="cis">
+<h3>CIs<a class="headerlink" href="#cis" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/ooutput_CI.png" src="_images/ooutput_CI.png" />
+<p>The CIs results tab displays the discovered CIs for your OCSANA run. The information produced includes:</p>
+<ul class="simple">
+<li><strong>CI</strong>: an optimal Combination of Intervention</li>
+<li><strong>Size</strong>: the number of nodes in the CI</li>
+<li><strong>OCSANA Score</strong>: The calculated OCSANA score for the CI</li>
+<li><strong>Target Score</strong>: The CI score for targets (component of OCSANA Score)</li>
+<li><strong>Side Effect Score</strong>: The CI score for off-targets (component of OCSANA Score), if off-target nodes were included in the search parameters</li>
+</ul>
+</div>
+<div class="section" id="paths-to-targets">
+<h3>Paths to Targets<a class="headerlink" href="#paths-to-targets" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/ooutput_paths.png" src="_images/ooutput_paths.png" />
+<p>This tab of the OCSANA output panel displays the paths from source nodes to each target node.
+The paths displayed will be in accordance with your run configuration and path algorithm selection.</p>
+</div>
+<div class="section" id="saving-results">
+<h3>Saving Results<a class="headerlink" href="#saving-results" title="Permalink to this headline">¶</a></h3>
+<p>By clicking  ‘Save Report’, you can save a text file that contains both your OCSANA configuration settings
+and results from your OCSANA run.</p>
+<img alt="_images/text_report.PNG" src="_images/text_report.PNG" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fc.html" class="btn btn-neutral float-right" title="Identifying Minimal Feedback Vertex Set Control (FC) Sets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install.html" class="btn btn-neutral float-left" title="Installing OCSANA+" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Lauren Marazzi
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
