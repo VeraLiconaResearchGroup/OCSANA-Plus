@@ -35,6 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Walk-Through Example: Cell Fate Specification in Ascidian Embryo" href="walkthrough.html" />
     <link rel="prev" title="Identifying Minimal Feedback Vertex Set Control (FC) Sets" href="fc.html" /> 
 </head>
 
@@ -84,7 +85,25 @@
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installing OCSANA+</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ocsana.html">Computing Optimal Combinations of Intervention with OCSANA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fc.html">Identifying Minimal Feedback Vertex Set Control (FC) Sets</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Performing Topological Estimation of Signal Flow with Signal Flow Analysis (SFA)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Performing Topological Estimation of Signal Flow with Signal Flow Analysis (SFA)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-sfa-in-cytoscape">Running SFA in Cytoscape</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-your-sfa-run">Configuring your SFA Run</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#node-selection-mode">Node Selection Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-node-name-column">Select Node Name Column</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#activated-nodes">Activated Nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inhibited-nodes">Inhibited Nodes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sfa-results">SFA Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sfa-config">SFA Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sfa">SFA</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="walkthrough.html">Walk-Through Example: Cell Fate Specification in Ascidian Embryo</a></li>
 </ul>
 
             
@@ -151,6 +170,62 @@
             
   <div class="section" id="performing-topological-estimation-of-signal-flow-with-signal-flow-analysis-sfa">
 <h1>Performing Topological Estimation of Signal Flow with Signal Flow Analysis (SFA)<a class="headerlink" href="#performing-topological-estimation-of-signal-flow-with-signal-flow-analysis-sfa" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="running-sfa-in-cytoscape">
+<h2>Running SFA in Cytoscape<a class="headerlink" href="#running-sfa-in-cytoscape" title="Permalink to this headline">¶</a></h2>
+<p>After installation of OCSANA+ and loading of a network,
+you can select Signal Flow Analysis from the main toolbar&gt;Apps&gt;OCSANA</p>
+<img alt="_images/SFAconfig.png" src="_images/SFAconfig.png" />
+<div class="section" id="configuring-your-sfa-run">
+<h3>Configuring your SFA Run<a class="headerlink" href="#configuring-your-sfa-run" title="Permalink to this headline">¶</a></h3>
+<p>After selecting an SFA option, a new pop-up menu will appear.</p>
+<img alt="_images/SFAmenu.png" src="_images/SFAmenu.png" />
+<div class="section" id="node-selection-mode">
+<h4>Node Selection Mode<a class="headerlink" href="#node-selection-mode" title="Permalink to this headline">¶</a></h4>
+<p>Select whether you will enter a string of activated and inhibited nodes,
+or will click-to-select the nodes.</p>
+</div>
+<div class="section" id="select-node-name-column">
+<h4>Select Node Name Column<a class="headerlink" href="#select-node-name-column" title="Permalink to this headline">¶</a></h4>
+<p>This option allows you to select which column of the node
+attribute table will be used to identify network nodes.</p>
+</div>
+<div class="section" id="activated-nodes">
+<h4>Activated Nodes<a class="headerlink" href="#activated-nodes" title="Permalink to this headline">¶</a></h4>
+<p>The Activated nodes section allows you to specify which nodes will have a postive basal activity (activated state). The nodes can be selected manually from the list of
+nodes appearing in this section or by copying and pasting the list of desired nodes in the
+dialog window after clicking on the set source nodes button.</p>
+</div>
+<div class="section" id="inhibited-nodes">
+<h4>Inhibited Nodes<a class="headerlink" href="#inhibited-nodes" title="Permalink to this headline">¶</a></h4>
+<p>The Inhibited nodes section allows you to specify which nodes will have a negative basal activity (inhibited state).
+The nodes can be selected manually from the list of nodes appearing in this
+section or by copying and pasting a list of nodes in the dialog window after clicking on the set
+of target nodes button.</p>
+<div class="section" id="edge-sign-configuration">
+<h5>Edge Sign Configuration<a class="headerlink" href="#edge-sign-configuration" title="Permalink to this headline">¶</a></h5>
+<p>To Configure edge signs, please include an “interaction” column that specifies positive edges as “activates”
+and negative edges as “inhibits.” Otherwise, all edges will be considered positive.</p>
+<p>After you have configured your run, click “Run Signal Flow Analysis”</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sfa-results">
+<h2>SFA Results<a class="headerlink" href="#sfa-results" title="Permalink to this headline">¶</a></h2>
+<p>After the SFA run has completed, the results will be displayed in the OCSANA tabe of the
+Cytoscape Results Panel (right panel)</p>
+<div class="section" id="sfa-config">
+<h3>SFA Config<a class="headerlink" href="#sfa-config" title="Permalink to this headline">¶</a></h3>
+<p>This subpanel displays the configuration set for this run (activated nodes,
+and inhibited nodes)</p>
+<img alt="_images/sfaresults_config.png" src="_images/sfaresults_config.png" />
+</div>
+<div class="section" id="sfa">
+<h3>SFA<a class="headerlink" href="#sfa" title="Permalink to this headline">¶</a></h3>
+<p>This subpanel contains the steady state log values for all network nodes.</p>
+<img alt="_images/sfaresults_sfa.png" src="_images/sfaresults_sfa.png" />
+</div>
+</div>
 </div>
 
 
@@ -160,6 +235,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="walkthrough.html" class="btn btn-neutral float-right" title="Walk-Through Example: Cell Fate Specification in Ascidian Embryo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="fc.html" class="btn btn-neutral float-left" title="Identifying Minimal Feedback Vertex Set Control (FC) Sets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
