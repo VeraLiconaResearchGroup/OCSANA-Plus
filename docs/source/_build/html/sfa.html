@@ -170,15 +170,22 @@
             
   <div class="section" id="performing-topological-estimation-of-signal-flow-with-signal-flow-analysis-sfa">
 <h1>Performing Topological Estimation of Signal Flow with Signal Flow Analysis (SFA)<a class="headerlink" href="#performing-topological-estimation-of-signal-flow-with-signal-flow-analysis-sfa" title="Permalink to this headline">¶</a></h1>
+<p>The SFA algorithm (<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5869720/">Lee and Cho, 2018</a>) estimates the steady state activity
+of a node by a linear differenceequation that considers:</p>
+<ol class="arabic simple">
+<li>the activity of a</li>
+<li>the effect and influence of incoming edges to</li>
+<li>the initial activities of the node.</li>
+</ol>
 <div class="section" id="running-sfa-in-cytoscape">
 <h2>Running SFA in Cytoscape<a class="headerlink" href="#running-sfa-in-cytoscape" title="Permalink to this headline">¶</a></h2>
 <p>After installation of OCSANA+ and loading of a network,
 you can select Signal Flow Analysis from the main toolbar&gt;Apps&gt;OCSANA</p>
-<img alt="_images/SFAconfig.png" src="_images/SFAconfig.png" />
+<img alt="_images/sfaconfig.png" src="_images/sfaconfig.png" />
 <div class="section" id="configuring-your-sfa-run">
 <h3>Configuring your SFA Run<a class="headerlink" href="#configuring-your-sfa-run" title="Permalink to this headline">¶</a></h3>
 <p>After selecting an SFA option, a new pop-up menu will appear.</p>
-<img alt="_images/SFAmenu.png" src="_images/SFAmenu.png" />
+<img alt="_images/sfamenu.png" src="_images/sfamenu.png" />
 <div class="section" id="node-selection-mode">
 <h4>Node Selection Mode<a class="headerlink" href="#node-selection-mode" title="Permalink to this headline">¶</a></h4>
 <p>Select whether you will enter a string of activated and inhibited nodes,

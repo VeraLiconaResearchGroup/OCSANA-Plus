@@ -2,6 +2,13 @@
 Performing Topological Estimation of Signal Flow with Signal Flow Analysis (SFA)
 =====
 
+The SFA algorithm (`Lee and Cho, 2018 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5869720/>`_) estimates the steady state activity 
+of a node by a linear differenceequation that considers:
+
+1. the activity of a 
+2. the effect and influence of incoming edges to 
+3. the initial activities of the node. 
+
 -----------------------------
 Running SFA in Cytoscape
 -----------------------------
@@ -9,7 +16,7 @@ Running SFA in Cytoscape
 After installation of OCSANA+ and loading of a network, 
 you can select Signal Flow Analysis from the main toolbar>Apps>OCSANA
 
-.. image:: _static/SFAconfig.png
+.. image:: _static/sfaconfig.png
 
 ++++++++++++++++++++++++++++
 Configuring your SFA Run
@@ -17,7 +24,7 @@ Configuring your SFA Run
 
 After selecting an SFA option, a new pop-up menu will appear.
 
-.. image:: _static/SFAmenu.png
+.. image:: _static/sfamenu.png
 
 
 ....................
