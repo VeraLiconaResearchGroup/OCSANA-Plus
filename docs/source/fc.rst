@@ -63,6 +63,7 @@ Cytoscape Results Panel (right panel).
 
 .. image:: _static/fcresults.png
 
+
 The results will include:
 
 - Source Nodes: either the list of source nodes in the network, or "Source nodes not computed" depending on your run configuration
