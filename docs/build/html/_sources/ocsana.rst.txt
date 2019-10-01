@@ -3,7 +3,7 @@
 ==============================================================
 
 OCSANA (Optimal Combinations of Interventions from Network Analysis), originally 
-introduced in (Vera-Licona et al., 2013), identifies and prioritizes optimal minimal 
+introduced in `\Vera-Licona et al., 2013 <https://www.ncbi.nlm.nih.gov/pubmed/23626000>`_, identifies and prioritizes optimal minimal 
 combinations of interventions (CIs) that disrupt the elementary paths from selected source nodes 
 to the specified target nodes. When indicated by the user, OCSANA seeks to additionally minimize 
 the side-effects that CIs can cause on specified off-target nodes.
@@ -121,8 +121,8 @@ The algorithms included are:
 - Greedy Heuristic Algorithm
 
 
-If you are interested in descriptions of these algorithms,
- please see the OCSANA+ supplementary file or Gainer-Dewar[link] and Vera-Licona[link]. 
+If you are interested in descriptions of these algorithms, please see 
+the `\OCSANA+ supplementary file` or `Gainer-Dewar and Vera-Licona, 2017 <https://epubs.siam.org/doi/abs/10.1137/15M1055024>`_. 
 
 .........................
 Allow sources in CIs

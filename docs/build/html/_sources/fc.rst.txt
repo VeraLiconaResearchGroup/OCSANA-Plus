@@ -6,8 +6,7 @@ FeedbackVertex Set Control (FC)
 is an attractor based control method 
 specifically developed for networks with non-linear 
 dynamics that uses a component ofthe network’s topology, 
-the Feedback Vertex Set (FVS) 
-(Mochizuki et al., 2013) 
+the Feedback Vertex Set (FVS) (`\Mochizuki et al., 2013 <https://www.ncbi.nlm.nih.gov/pubmed/23774067>`_)
 
 -----------------------------
 Running FC in Cytoscape
@@ -23,12 +22,13 @@ you can select Feedback Vertex Set Control from the main toolbar>Apps>OCSANA
 Configuring your FC Run
 ++++++++++++++++++++++++++++
 Two   FC   algorithms   are implemented  in  OCSANA+.  
-Mochizuki  et  al.  (2013)  mathematically identified the 
+`\Mochizuki et al., 2013 <https://www.ncbi.nlm.nih.gov/pubmed/23774067>`_ 
+mathematically identified the 
 FC set to be comprised of the network’s minimal FVS. 
 The FVS of a network is defined as the minimal set of nodes 
 whose removal would leave a graph without cycles. 
 Later, an extended FC control version adding the the 
-network’s source nodes was been proposed by Zañudo et al. (2017).
+network’s source nodes was proposed by `Zanudo et al., 2017 <https://www.ncbi.nlm.nih.gov/pubmed/28655847>`_.
 
 You can choose either version to run in OCSANA+.
 
