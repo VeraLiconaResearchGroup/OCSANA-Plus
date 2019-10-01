@@ -63,7 +63,7 @@ Select "Identify Feedback Vertex Set Control Set"
 
 The results will be displayed in the FC subpanel of the Results Panel. Minimal FC sets are highlighted
 
-.. image:: _static/fcresults copy.png
+.. image:: _static/fcresults_fvses.png
 
 ...........................................................
 Step 3: Simulating FC node perturbations using SFA 
