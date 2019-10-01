@@ -77,9 +77,9 @@ Configuring Edge Sign (purple panel)
 To Configure edge signs, please include an "interaction" column that specifies positive edges as "activates"
 and negative edges as "inhibits." Otherwise, all edges will be considered positive. 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Configure Path Finding (blue panel)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This panel allows users to select which algorithm should be used for finding paths between source nodes and target/off-target nodes.
 
@@ -91,16 +91,16 @@ searches for the paths with the shortest length among all the elementary paths
 connecting source nodes to target nodes and source nodes to side-effect nodes (via Dijkstra’s
 algorithm).
 
-.........................
+................................
 All Non-Self-intersecting paths
-.........................
+................................
 
 considers all the paths, between specified nodes, that do not
 contain loops (self-intersections). 
 
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Configure Combinations of Interventions (CIs) with Minimal Hitting Sets Discovery (green panel) 
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This panel allows you to choose which MHS solving algorithm you would like to use to discover CIs.
 A CI is as a set of nodes such that each elementary path (a path from 
@@ -140,14 +140,14 @@ if selected, enter the number of threads to be used in the below box (min:1,max:
 
 ........................
 Bound CI size
-.........................
+........................
 
 Select this option if you would like to bind the number of nodes that can be in a CI
 if selected, enter the max CI size in the below box (min:1,max:20)
 
-........................
+...............................................................
 Additional configuration option of Greedy Heuristic Algorithm
-.........................
+...............................................................
 
 For the Greedy Heuristic Algorithm, you may also set a bound on the number of candidates
 (the number of potential CIs). 

@@ -1,6 +1,6 @@
-======
+=====================
 Installing OCSANA+
-======
+=====================
 The OCSANA+ jar file can be downloaded from the OCSANA+ github repository
 https://github.com/VeraLiconaResearchGroup/OCSANA_Plus/tree/master/OCSANA_Plus/target
 

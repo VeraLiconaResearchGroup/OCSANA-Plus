@@ -88,6 +88,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#configuring-your-ocsana-run">Configuring your OCSANA Run</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#configure-network-processing-pink-panel">Configure Network Processing (pink panel)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#configuring-edge-sign-purple-panel">Configuring Edge Sign (purple panel)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configure-path-finding-blue-panel">Configure Path Finding (blue panel)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#configure-combinations-of-interventions-cis-with-minimal-hitting-sets-discovery-green-panel">Configure Combinations of Interventions (CIs) with Minimal Hitting Sets Discovery (green panel)</a></li>
 </ul>
 </li>
@@ -222,6 +223,9 @@ nodes in the dialog window after clicking on the set side-effects nodes button.<
 <h4>Configuring Edge Sign (purple panel)<a class="headerlink" href="#configuring-edge-sign-purple-panel" title="Permalink to this headline">¶</a></h4>
 <p>To Configure edge signs, please include an “interaction” column that specifies positive edges as “activates”
 and negative edges as “inhibits.” Otherwise, all edges will be considered positive.</p>
+</div>
+<div class="section" id="configure-path-finding-blue-panel">
+<h4>Configure Path Finding (blue panel)<a class="headerlink" href="#configure-path-finding-blue-panel" title="Permalink to this headline">¶</a></h4>
 <p>This panel allows users to select which algorithm should be used for finding paths between source nodes and target/off-target nodes.</p>
 <div class="section" id="shortest-paths">
 <h5>Shortest Paths<a class="headerlink" href="#shortest-paths" title="Permalink to this headline">¶</a></h5>
@@ -264,8 +268,14 @@ the <cite>OCSANA+ supplementary file</cite> or <a class="reference external" hre
 <h5>Bound thread count<a class="headerlink" href="#bound-thread-count" title="Permalink to this headline">¶</a></h5>
 <p>Select this option if you would like to bind the number of threads used to CI Discovery
 if selected, enter the number of threads to be used in the below box (min:1,max:16)</p>
+</div>
+<div class="section" id="bound-ci-size">
+<h5>Bound CI size<a class="headerlink" href="#bound-ci-size" title="Permalink to this headline">¶</a></h5>
 <p>Select this option if you would like to bind the number of nodes that can be in a CI
 if selected, enter the max CI size in the below box (min:1,max:20)</p>
+</div>
+<div class="section" id="additional-configuration-option-of-greedy-heuristic-algorithm">
+<h5>Additional configuration option of Greedy Heuristic Algorithm<a class="headerlink" href="#additional-configuration-option-of-greedy-heuristic-algorithm" title="Permalink to this headline">¶</a></h5>
 <p>For the Greedy Heuristic Algorithm, you may also set a bound on the number of candidates
 (the number of potential CIs).
 If selected, enter the number below. Note this is converted to millions (if you input “1”, OCSANA will generate 1,000,000 candidates)</p>

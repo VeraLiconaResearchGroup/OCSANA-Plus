@@ -26,12 +26,12 @@ Step 1: Initial Cytoscape Setup
 Upon launching Cytoscape, a new session will be opened. You can load the ascidian embryo 
 network by selecting "Import Network from file System" icon in the toolbar
 
-.. image:: _static/walkthrough/import_network.png
+.. image:: _static/import_network.png
 
 
 In the pop-up menu, navigate to the folder where you stored the network, and select the file.
 
-.. image:: _static/walkthrough/import2.png
+.. image:: _static/import2.png
 
 
 ..........................................................
@@ -47,23 +47,23 @@ OCSANA+ provides two algorithms for identifying FC sets: with or without source 
 
 To replicate the results of `Kobayashi et al., 2018 <https://www.ncbi.nlm.nih.gov/pubmed/30240747>`_, select "without source nodes"
 
-.. image:: _static/walkthrough/fcwosn.png
+.. image:: _static/fcwosn.png
 
 In the pop up menu:
 
 1. Set "select node name column" to "shared name"
 2. For this tutorial example, we will do an unbound FVS Discovery search. This will run the FVS algorithm 50 times to identify FVSes. Note that there may not be 50 FVSes in the network, so the number of FVSes returned may be fewer than 50. 
 
-.. image:: _static/walkthrough/fcbox.png
+.. image:: _static/fcbox.png
 
 Select "Identify Feedback Vertex Set Control Set"
 
-.. image:: _static/walkthrough/running.png
+.. image:: _static/running.png
 
 
 The results will be displayed in the FC subpanel of the Results Panel. Minimal FC sets are highlighted
 
-.. image:: _static/walkthrough/fcresults.png
+.. image:: _static/fcresults.png
 
 ...........................................................
 Step 3: Simulating FC node perturbations using SFA 
@@ -81,7 +81,7 @@ which are noted to initiate the `zygotic developmental program <https://www.ncbi
 
 From the Apps dropdown in the toolbar navigate to "OCSANA>Signal Flow Analysis".
 
-.. image:: _static/walkthrough/sfadd.png
+.. image:: _static/sfadd.png
 
 In the pop-up menu:
 
@@ -90,11 +90,11 @@ In the pop-up menu:
 2. select "shared name" for Select Node Name column
 3a. If "List" is selected, scroll in the "Activated Nodes" box and ctrl+click Gata.a and Zic-r.a
 
-.. image:: _static/walkthrough/sfaconfig2.png
+.. image:: _static/sfaconfig2.png
 
 3b. If "String" is selected, type Gata.a and Zic-r.a into the "Activated Nodes" box (either comma delimited, or newline delimited)
 
-.. image:: _static/walkthrough/sfaconfig1.png
+.. image:: _static/sfaconfig1.png
 
 
 To start SFA, click "Run Signal Flow Analysis"
@@ -103,12 +103,12 @@ After completion of SFA, the results will appear in the SFA tab of the Results P
 
 The "SFAConfig" tab displays which nodes were activated or inhibited in the initial configuration
 
-.. image:: _static/walkthrough/sfares_config.png
+.. image:: _static/sfares_config.png
 
 
 The "SFA" tab displays the steady state log values for all network nodes.
  
- .. image:: _static/walkthrough/sfares_values.png
+ .. image:: _static/sfares_values.png
 
 
 We repeat this analysis performing a perturbation of the FC nodes.
@@ -119,13 +119,13 @@ in the ascidian embryo.
 We can simulate this experiment using SFA by selecting Zic-r.b, and Erk signaling as activated nodes, and
 Foxa.a, Foxd, and Neurog as inactivated nodes
 
-.. image:: _static/walkthrough/sfares_config_perturb.png
+.. image:: _static/sfares_config_perturb.png
 
 Again, the configuration and results appear in the Results Panel.
 
-.. image:: _static/walkthrough/sfares_config_perturb.png
+.. image:: _static/sfares_config_perturb.png
 
-.. image:: _static/walkthrough/sfares_values_perturb.png
+.. image:: _static/sfares_values_perturb.png
 
 
 Using the steady state log values produced by SFA, we can calculate a direction of activity change between the perturbed and unperturbed state,
@@ -160,7 +160,7 @@ The pop-up menu is identical to that of step 2.
 After setting your configurations and running FC discovery, the FC results subpanel of the Results Panel will display 
 both the FVSes and source nodes
 
-.. image:: _static/walkthrough/fcwsn.png
+.. image:: _static/fcwsn.png
 
 
 We now have identified the nine source nodes in the network
@@ -185,18 +185,18 @@ In the OCSANA panel in the Cytoscape Control Panel:
 
 After configuration, click "Run OCSANA analysis"
 
-.. image:: _static/walkthrough/ocsana_config.png
+.. image:: _static/ocsana_config.png
 
 Once the OCSANA Run has completed, the results will appear
 in the OCSANA Subpanel of the results panel. 
 
 The CI tab displays the minimal CIs discovered under user settings
 
-.. image:: _static/walkthrough/ocsanares1.png
+.. image:: _static/ocsanares1.png
 
 The paths to targets tab displays the paths from  the nine source nodes to Epi1
 
-.. image:: _static/walkthrough/ocsanares2.png
+.. image:: _static/ocsanares2.png
 
 
 ...........................................................
@@ -209,13 +209,13 @@ for epidermal tissue specification. Do note that Erk signalling is a node within
 
 Using SFA, we will set the activated nodes to Gata.a and inactivated nodes as Foxa.a, Foxd, Neurog, Zic-r.b, and Erk signalling
 
-.. image:: _static/walkthrough/sfa_ci_config.png
+.. image:: _static/sfa_ci_config.png
 
 After running SFA, we see the results in the results panel
 
-.. image:: _static/walkthrough/sfa_ci_results1.png
+.. image:: _static/sfa_ci_results1.png
 
-.. image:: _static/walkthrough/sfa_ci_results2.png
+.. image:: _static/sfa_ci_results2.png
 
 
 Again, we can calculate the logFC between the above perturbation
