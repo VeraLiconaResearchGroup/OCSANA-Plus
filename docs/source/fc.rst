@@ -63,6 +63,9 @@ Cytoscape Results Panel (right panel).
 
 .. image:: _static/fcresults.png
 
+.. image:: _static/fcresults.PNG
+
+.. image:: _static/FCresults.PNG
 
 The results will include:
 
