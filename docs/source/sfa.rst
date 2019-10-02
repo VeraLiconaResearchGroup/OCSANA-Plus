@@ -16,7 +16,7 @@ Running SFA in Cytoscape
 After installation of OCSANA+ and loading of a network, 
 you can select Signal Flow Analysis from the main toolbar>Apps>OCSANA
 
-.. image:: _static/sfaconfig.PNG
+.. image:: _static/SFAconfig.PNG
 
 ++++++++++++++++++++++++++++
 Configuring your SFA Run
@@ -24,7 +24,7 @@ Configuring your SFA Run
 
 After selecting an SFA option, a new pop-up menu will appear.
 
-.. image:: _static/sfamenu.PNG
+.. image:: _static/SFAmenu.PNG
 
 
 ....................
