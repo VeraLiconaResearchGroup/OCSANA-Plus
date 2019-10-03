@@ -127,7 +127,6 @@ Again, the configuration and results appear in the Results Panel.
 
 .. image:: _static/sfares_values_perturb.PNG
 
-
 Using the steady state log values produced by SFA, we can calculate a direction of activity change between the perturbed and unperturbed state,
 synonymous with a logFC value.
 

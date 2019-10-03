@@ -178,9 +178,9 @@ the accuracy of simulated results.</p>
 <h2>Step 1: Initial Cytoscape Setup<a class="headerlink" href="#step-1-initial-cytoscape-setup" title="Permalink to this headline">¶</a></h2>
 <p>Upon launching Cytoscape, a new session will be opened. You can load the ascidian embryo
 network by selecting “Import Network from file System” icon in the toolbar</p>
-<img alt="_images/import_network.png" src="_images/import_network.png" />
+<img alt="_images/import_network.PNG" src="_images/import_network.PNG" />
 <p>In the pop-up menu, navigate to the folder where you stored the network, and select the file.</p>
-<img alt="_images/import2.png" src="_images/import2.png" />
+<img alt="_images/import2.PNG" src="_images/import2.PNG" />
 </div>
 <div class="section" id="step-2-identifying-feedback-vertex-set-control-sets-fc">
 <h2>Step 2: Identifying Feedback Vertex Set Control Sets (FC)<a class="headerlink" href="#step-2-identifying-feedback-vertex-set-control-sets-fc" title="Permalink to this headline">¶</a></h2>
@@ -190,17 +190,17 @@ we perform Feedback Vertex Set Control (FC) Discovery.</p>
 OCSANA+ provides two algorithms for identifying FC sets: with or without source nodes (You can read more about these two algorithms in &lt;<a href="#id13"><span class="problematic" id="id14">`OCSANA+ paper supplement`_</span></a>, <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/23774067">Mochizuki et al., 2013</a>, or
 <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/28655847">Zanudo et al., 2017</a>.).</p>
 <p>To replicate the results of <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/30240747">Kobayashi et al., 2018</a>, select “without source nodes”</p>
-<img alt="_images/fcwosn.png" src="_images/fcwosn.png" />
+<img alt="_images/fcwosn.PNG" src="_images/fcwosn.PNG" />
 <p>In the pop up menu:</p>
 <ol class="arabic simple">
 <li>Set “select node name column” to “shared name”</li>
 <li>For this tutorial example, we will do an unbound FVS Discovery search. This will run the FVS algorithm 50 times to identify FVSes. Note that there may not be 50 FVSes in the network, so the number of FVSes returned may be fewer than 50.</li>
 </ol>
-<img alt="_images/fcbox.png" src="_images/fcbox.png" />
+<img alt="_images/fcbox.PNG" src="_images/fcbox.PNG" />
 <p>Select “Identify Feedback Vertex Set Control Set”</p>
-<img alt="_images/running.png" src="_images/running.png" />
+<img alt="_images/running.PNG" src="_images/running.PNG" />
 <p>The results will be displayed in the FC subpanel of the Results Panel. Minimal FC sets are highlighted</p>
-<img alt="_images/fcresults.png" src="_images/fcresults.png" />
+<img alt="_images/fcresults_fvses.png" src="_images/fcresults_fvses.png" />
 </div>
 <div class="section" id="step-3-simulating-fc-node-perturbations-using-sfa">
 <h2>Step 3: Simulating FC node perturbations using SFA<a class="headerlink" href="#step-3-simulating-fc-node-perturbations-using-sfa" title="Permalink to this headline">¶</a></h2>
@@ -213,23 +213,23 @@ Signal Flow Analysis (SFA) to estimate the log steady state values of network no
 <p>First, we simulate the “unperturbed” state (no up-regulation or down regulation of FC nodes), by activation of Gata.a and Zic-r.a
 which are noted to initiate the <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/30240747">zygotic developmental program</a>.</p>
 <p>From the Apps dropdown in the toolbar navigate to “OCSANA&gt;Signal Flow Analysis”.</p>
-<img alt="_images/sfadd.png" src="_images/sfadd.png" />
+<img alt="_images/sfadd.PNG" src="_images/sfadd.PNG" />
 <p>In the pop-up menu:</p>
 <ol class="arabic simple">
 <li>select either “List” or “String” for Node Selection Mode</li>
 </ol>
 <p>2. select “shared name” for Select Node Name column
 3a. If “List” is selected, scroll in the “Activated Nodes” box and ctrl+click Gata.a and Zic-r.a</p>
-<img alt="_images/sfaconfig2.png" src="_images/sfaconfig2.png" />
+<img alt="_images/sfaconfig2.PNG" src="_images/sfaconfig2.PNG" />
 <p>3b. If “String” is selected, type Gata.a and Zic-r.a into the “Activated Nodes” box (either comma delimited, or newline delimited)</p>
-<img alt="_images/sfaconfig1.png" src="_images/sfaconfig1.png" />
+<img alt="_images/sfaconfig1.PNG" src="_images/sfaconfig1.PNG" />
 <p>To start SFA, click “Run Signal Flow Analysis”</p>
 <p>After completion of SFA, the results will appear in the SFA tab of the Results Panel.</p>
 <p>The “SFAConfig” tab displays which nodes were activated or inhibited in the initial configuration</p>
-<img alt="_images/sfares_config.png" src="_images/sfares_config.png" />
+<img alt="_images/sfares_config.PNG" src="_images/sfares_config.PNG" />
 <p>The “SFA” tab displays the steady state log values for all network nodes.</p>
 <blockquote>
-<div><img alt="_images/sfares_values.png" src="_images/sfares_values.png" />
+<div><img alt="_images/sfares_values.PNG" src="_images/sfares_values.PNG" />
 </div></blockquote>
 <p>We repeat this analysis performing a perturbation of the FC nodes.
 As described in <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/30240747">Kobayashi et al., 2018</a>, down-regulation of
@@ -237,10 +237,10 @@ Foxa.a, Foxd, and Neurog and up-regulation of Zic-r.b, and Erk signaling would l
 in the ascidian embryo.</p>
 <p>We can simulate this experiment using SFA by selecting Zic-r.b, and Erk signaling as activated nodes, and
 Foxa.a, Foxd, and Neurog as inactivated nodes</p>
-<img alt="_images/sfares_config_perturb.png" src="_images/sfares_config_perturb.png" />
+<img alt="_images/sfares_config_perturb.PNG" src="_images/sfares_config_perturb.PNG" />
 <p>Again, the configuration and results appear in the Results Panel.</p>
-<img alt="_images/sfares_config_perturb.png" src="_images/sfares_config_perturb.png" />
-<img alt="_images/sfares_values_perturb.png" src="_images/sfares_values_perturb.png" />
+<img alt="_images/sfares_config_perturb.PNG" src="_images/sfares_config_perturb.PNG" />
+<img alt="_images/sfares_values_perturb.PNG" src="_images/sfares_values_perturb.PNG" />
 <p>Using the steady state log values produced by SFA, we can calculate a direction of activity change between the perturbed and unperturbed state,
 synonymous with a logFC value.</p>
 <p>For example, the log steady state value produced of mesenchymal marker Fli/Erg.a in the unperturbed state is 0.00332. The value in
@@ -263,7 +263,7 @@ we applied the extended FC approach from <a class="reference external" href="htt
 <p>The pop-up menu is identical to that of step 2.</p>
 <p>After setting your configurations and running FC discovery, the FC results subpanel of the Results Panel will display
 both the FVSes and source nodes</p>
-<img alt="_images/fcwsn.png" src="_images/fcwsn.png" />
+<img alt="_images/fcwsn.PNG" src="_images/fcwsn.PNG" />
 <dl class="docutils">
 <dt>We now have identified the nine source nodes in the network</dt>
 <dd>Ctnnb, Gata.a, Gdf1/3-r, Hes.a, Pem1, Sox4/11/12, Tp53.a,Tp53.b, Zic-r.a</dd>
@@ -285,13 +285,13 @@ epidermis marker Epi1.</p>
 <li>To configure CI discovery we have chosen the MMCS algorithm. We will check “allow sources in CIs” so that source nodes can be considered in CIs. We will not bind the number of threads. We will bind CI size at 6 nodes.</li>
 </ol>
 <p>After configuration, click “Run OCSANA analysis”</p>
-<img alt="_images/ocsana_config.png" src="_images/ocsana_config.png" />
+<img alt="_images/ocsana_config.PNG" src="_images/ocsana_config.PNG" />
 <p>Once the OCSANA Run has completed, the results will appear
 in the OCSANA Subpanel of the results panel.</p>
 <p>The CI tab displays the minimal CIs discovered under user settings</p>
-<img alt="_images/ocsanares1.png" src="_images/ocsanares1.png" />
+<img alt="_images/ocsanares1.PNG" src="_images/ocsanares1.PNG" />
 <p>The paths to targets tab displays the paths from  the nine source nodes to Epi1</p>
-<img alt="_images/ocsanares2.png" src="_images/ocsanares2.png" />
+<img alt="_images/ocsanares2.PNG" src="_images/ocsanares2.PNG" />
 </div>
 <div class="section" id="simulating-fc-and-ci-node-perturbations-using-sfa">
 <h2>Simulating FC and CI node perturbations using SFA<a class="headerlink" href="#simulating-fc-and-ci-node-perturbations-using-sfa" title="Permalink to this headline">¶</a></h2>
@@ -299,10 +299,10 @@ in the OCSANA Subpanel of the results panel.</p>
 specified in <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/30240747">Kobayashi et al., 2018</a> (down regulation of FC nodes) to simulate the results
 for epidermal tissue specification. Do note that Erk signalling is a node within the FC set.</p>
 <p>Using SFA, we will set the activated nodes to Gata.a and inactivated nodes as Foxa.a, Foxd, Neurog, Zic-r.b, and Erk signalling</p>
-<img alt="_images/sfa_ci_config.png" src="_images/sfa_ci_config.png" />
+<img alt="_images/sfa_ci_config.PNG" src="_images/sfa_ci_config.PNG" />
 <p>After running SFA, we see the results in the results panel</p>
-<img alt="_images/sfa_ci_results1.png" src="_images/sfa_ci_results1.png" />
-<img alt="_images/sfa_ci_results2.png" src="_images/sfa_ci_results2.png" />
+<img alt="_images/sfa_ci_results1.PNG" src="_images/sfa_ci_results1.PNG" />
+<img alt="_images/sfa_ci_results2.PNG" src="_images/sfa_ci_results2.PNG" />
 <p>Again, we can calculate the logFC between the above perturbation
 and the unperturbed steady state for Epi1 (0.08643-0.05944=0.02699‬).
 We see that the value is positive; therefore Epi1 is upregulated in the

@@ -61,9 +61,6 @@ FC Results
 After the OCSANA run has completed, the results will be displayed in the OCSANA tabe of the 
 Cytoscape Results Panel (right panel).
 
-.. image:: _static/fcresults.png
-
-.. image:: _static/fcresults.PNG
 
 .. image:: _static/FCresults.PNG
 

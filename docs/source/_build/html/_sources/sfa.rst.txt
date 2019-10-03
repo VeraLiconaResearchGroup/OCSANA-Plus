@@ -16,7 +16,7 @@ Running SFA in Cytoscape
 After installation of OCSANA+ and loading of a network, 
 you can select Signal Flow Analysis from the main toolbar>Apps>OCSANA
 
-.. image:: _static/sfaconfig.png
+.. image:: _static/SFAconfig.PNG
 
 ++++++++++++++++++++++++++++
 Configuring your SFA Run
@@ -24,7 +24,7 @@ Configuring your SFA Run
 
 After selecting an SFA option, a new pop-up menu will appear.
 
-.. image:: _static/sfamenu.png
+.. image:: _static/SFAmenu.PNG
 
 
 ....................
@@ -85,7 +85,7 @@ SFA Config
 This subpanel displays the configuration set for this run (activated nodes, 
 and inhibited nodes)
 
-.. image:: _static/sfaresults_config.png
+.. image:: _static/sfaresults_config.PNG
 
 ++++++++++++++++++++++++++++
 SFA
@@ -93,4 +93,4 @@ SFA
 
 This subpanel contains the steady state log values for all network nodes.
 
-.. image:: _static/sfaresults_sfa.png
+.. image:: _static/sfaresults_sfa.PNG
