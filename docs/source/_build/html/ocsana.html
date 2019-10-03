@@ -187,57 +187,36 @@ the OCSANA configuration menu will appear as a tab in the Cytoscape Control Pane
 <h4>Configure Network Processing (pink panel)<a class="headerlink" href="#configure-network-processing-pink-panel" title="Permalink to this headline">¶</a></h4>
 <p>This subpanel allows users to select how OCSANA processes your network (which columns to read for node names)
 and which nodes to build paths from (source nodes to targets, source nodes to off-targets).</p>
-<div class="section" id="node-selection-mode">
-<h5>Node Selection Mode<a class="headerlink" href="#node-selection-mode" title="Permalink to this headline">¶</a></h5>
-<p>Select whether you will enter a string of source, target, and off target nodes,
+<p><strong>Node Selection Mode:</strong> Select whether you will enter a string of source, target, and off target nodes,
 or will click-to-select the nodes.</p>
-</div>
-<div class="section" id="select-node-name-column">
-<h5>Select Node Name Column<a class="headerlink" href="#select-node-name-column" title="Permalink to this headline">¶</a></h5>
-<p>This option allows users to select which column of the node
+<p><strong>Select Node Name Column</strong>: This option allows users to select which column of the node
 attribute table will be used to identify network nodes.</p>
-</div>
-<div class="section" id="source-nodes">
-<h5>Source Nodes<a class="headerlink" href="#source-nodes" title="Permalink to this headline">¶</a></h5>
-<p>The Source nodes section allows the user to specify the source nodes (i.e. the nodes from
+<p><strong>Source Nodes</strong>: The Source nodes section allows the user to specify the source nodes (i.e. the nodes from
 which the signals’ cascades will start). The nodes can be selected manually from the list of
 nodes appearing in this section or by copying and pasting the list of desired nodes in the
 dialog window after clicking on the set source nodes button.</p>
-</div>
-<div class="section" id="target-nodes">
-<h5>Target Nodes<a class="headerlink" href="#target-nodes" title="Permalink to this headline">¶</a></h5>
-<p>The Target nodessection allows the user to select the target nodes (i.e. the nodes intended to
+<p><strong>Target Nodes</strong>: The Target nodes section allows the user to select the target nodes (i.e. the nodes intended to
 be blocked). The nodes can be selected manually from the list of nodes appearing in this
 section or by copying and pasting a list of nodes in the dialog window after clicking on the set
 of target nodes button.</p>
-</div>
-<div class="section" id="off-target-nodes">
-<h5>Off-target Nodes<a class="headerlink" href="#off-target-nodes" title="Permalink to this headline">¶</a></h5>
-<p>The off-target nodes section is an optional column for the user that allows to select offtarget (side-effect) nodes, that is, nodes that are preferred to be avoided when constructing CIs. A CI that
+<p><strong>Off-target Nodes</strong>: The off-target nodes section is an optional column for the user that allows to select offtarget (side-effect) nodes, that is, nodes that are preferred to be avoided when constructing CIs. A CI that
 contains a node from such given list, will then receive a penalty. The nodes can be selected
 manually from the list of nodes appearing in this column or by copying and pasting the list of
 nodes in the dialog window after clicking on the set side-effects nodes button.</p>
 </div>
-</div>
 <div class="section" id="configuring-edge-sign-purple-panel">
 <h4>Configuring Edge Sign (purple panel)<a class="headerlink" href="#configuring-edge-sign-purple-panel" title="Permalink to this headline">¶</a></h4>
-<p>To Configure edge signs, please include an “interaction” column that specifies positive edges as “activates”
+<p>To configure edge signs, please include an “interaction” column in your network table that specifies positive edges as “activates”
 and negative edges as “inhibits.” Otherwise, all edges will be considered positive.</p>
 </div>
 <div class="section" id="configure-path-finding-blue-panel">
 <h4>Configure Path Finding (blue panel)<a class="headerlink" href="#configure-path-finding-blue-panel" title="Permalink to this headline">¶</a></h4>
 <p>This panel allows users to select which algorithm should be used for finding paths between source nodes and target/off-target nodes.</p>
-<div class="section" id="shortest-paths">
-<h5>Shortest Paths<a class="headerlink" href="#shortest-paths" title="Permalink to this headline">¶</a></h5>
-<p>searches for the paths with the shortest length among all the elementary paths
+<p><strong>Shortest Paths</strong>: searches for the paths with the shortest length among all the elementary paths
 connecting source nodes to target nodes and source nodes to side-effect nodes (via Dijkstra’s
 algorithm).</p>
-</div>
-<div class="section" id="all-non-self-intersecting-paths">
-<h5>All Non-Self-intersecting paths<a class="headerlink" href="#all-non-self-intersecting-paths" title="Permalink to this headline">¶</a></h5>
-<p>considers all the paths, between specified nodes, that do not
+<p><strong>All Non-Self-intersecting paths</strong>: considers all the paths, between specified nodes, that do not
 contain loops (self-intersections).</p>
-</div>
 </div>
 <div class="section" id="configure-combinations-of-interventions-cis-with-minimal-hitting-sets-discovery-green-panel">
 <h4>Configure Combinations of Interventions (CIs) with Minimal Hitting Sets Discovery (green panel)<a class="headerlink" href="#configure-combinations-of-interventions-cis-with-minimal-hitting-sets-discovery-green-panel" title="Permalink to this headline">¶</a></h4>
@@ -260,20 +239,11 @@ can reach simultaneously.</p>
 </ul>
 <p>If you are interested in descriptions of these algorithms, please see
 the <cite>OCSANA+ supplementary file</cite> or <a class="reference external" href="https://epubs.siam.org/doi/abs/10.1137/15M1055024">Gainer-Dewar and Vera-Licona, 2017</a>.</p>
-<div class="section" id="allow-sources-in-cis">
-<h5>Allow sources in CIs<a class="headerlink" href="#allow-sources-in-cis" title="Permalink to this headline">¶</a></h5>
-<p>Select this option if you would like source nodes to be considered in CIs</p>
-</div>
-<div class="section" id="bound-thread-count">
-<h5>Bound thread count<a class="headerlink" href="#bound-thread-count" title="Permalink to this headline">¶</a></h5>
-<p>Select this option if you would like to bind the number of threads used to CI Discovery
+<p><strong>Allow sources in CIs</strong>: Select this option if you would like source nodes to be considered in CIs</p>
+<p><strong>Bound thread count</strong>: Select this option if you would like to bind the number of threads used to CI Discovery
 if selected, enter the number of threads to be used in the below box (min:1,max:16)</p>
-</div>
-<div class="section" id="bound-ci-size">
-<h5>Bound CI size<a class="headerlink" href="#bound-ci-size" title="Permalink to this headline">¶</a></h5>
-<p>Select this option if you would like to bind the number of nodes that can be in a CI
+<p><strong>Bound CI size</strong>: Select this option if you would like to bind the number of nodes that can be in a CI
 if selected, enter the max CI size in the below box (min:1,max:20)</p>
-</div>
 <div class="section" id="additional-configuration-option-of-greedy-heuristic-algorithm">
 <h5>Additional configuration option of Greedy Heuristic Algorithm<a class="headerlink" href="#additional-configuration-option-of-greedy-heuristic-algorithm" title="Permalink to this headline">¶</a></h5>
 <p>For the Greedy Heuristic Algorithm, you may also set a bound on the number of candidates
@@ -286,7 +256,7 @@ If selected, enter the number below. Note this is converted to millions (if you 
 </div>
 <div class="section" id="ocsana-results">
 <h2>OCSANA Results<a class="headerlink" href="#ocsana-results" title="Permalink to this headline">¶</a></h2>
-<p>After the OCSANA run has completed, the results will be displayed in the OCSANA tabe of the
+<p>After the OCSANA run has completed, the results will be displayed in the OCSANA subpanel of the
 Cytoscape Results Panel (right panel)</p>
 <div class="section" id="cis">
 <h3>CIs<a class="headerlink" href="#cis" title="Permalink to this headline">¶</a></h3>

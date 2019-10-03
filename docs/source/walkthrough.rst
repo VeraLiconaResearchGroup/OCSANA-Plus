@@ -69,14 +69,14 @@ The results will be displayed in the FC subpanel of the Results Panel. Minimal F
 Step 3: Simulating FC node perturbations using SFA 
 ...........................................................
 
-We will focus on the FC set used in `Kobayashi et al., 2018 <https://www.ncbi.nlm.nih.gov/pubmed/30240747>`_ in vivo perturbations for our simulation with SFA
-The FC set consists of the following 5 nodes
+We will focus on the FC set used in `Kobayashi et al., 2018 <https://www.ncbi.nlm.nih.gov/pubmed/30240747>`_ in vivo perturbations for our simulation with SFA.
+The FC set consists of the following 5 nodes:
    Foxa.a, Foxd, Neurog, Zic-r.b, and Erk signaling
 
-To simulate the experimental results in `Kobayashi et al., 2018 <https://www.ncbi.nlm.nih.gov/pubmed/30240747>`_ we will use
+To simulate the experimental results in `Kobayashi et al., 2018 <https://www.ncbi.nlm.nih.gov/pubmed/30240747>`_, we will use
 Signal Flow Analysis (SFA) to estimate the log steady state values of network nodes (`Lee and Cho, 2018 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5869720/>`_)
 
-First, we simulate the "unperturbed" state (no up-regulation or down regulation of FC nodes), by activation of Gata.a and Zic-r.a 
+First, we simulate the "unperturbed" state (no up-regulation or down-regulation of FC nodes), by activation of Gata.a and Zic-r.a 
 which are noted to initiate the `zygotic developmental program <https://www.ncbi.nlm.nih.gov/pubmed/30240747>`_.
 
 From the Apps dropdown in the toolbar navigate to "OCSANA>Signal Flow Analysis".
@@ -101,7 +101,7 @@ To start SFA, click "Run Signal Flow Analysis"
 
 After completion of SFA, the results will appear in the SFA tab of the Results Panel.
 
-The "SFAConfig" tab displays which nodes were activated or inhibited in the initial configuration
+The "SFAConfig" tab displays which nodes were activated or inhibited in the initial user configuration
 
 .. image:: _static/sfares_config.PNG
 
@@ -111,19 +111,18 @@ The "SFA" tab displays the steady state log values for all network nodes.
  .. image:: _static/sfares_values.PNG
 
 
-We repeat this analysis performing a perturbation of the FC nodes.
-As described in `Kobayashi et al., 2018 <https://www.ncbi.nlm.nih.gov/pubmed/30240747>`_, down-regulation of
+We repeat this analysis performing a perturbation of the FC nodes. For example, as described in `Kobayashi et al., 2018 <https://www.ncbi.nlm.nih.gov/pubmed/30240747>`_, down-regulation of
 Foxa.a, Foxd, and Neurog and up-regulation of Zic-r.b, and Erk signaling would lead to the mesenchymal tissue cell fate 
 in the ascidian embryo. 
 
-We can simulate this experiment using SFA by selecting Zic-r.b, and Erk signaling as activated nodes, and
+We can simulate this experiment using SFA by selecting Zic-r.b and Erk signaling as activated nodes, and
 Foxa.a, Foxd, and Neurog as inactivated nodes
 
 .. image:: _static/sfares_config_perturb.PNG
 
 Again, the configuration and results appear in the Results Panel.
 
-.. image:: _static/sfares_config_perturb.PNG
+.. image:: _static/sfa_config_perturb.PNG
 
 .. image:: _static/sfares_values_perturb.PNG
 
@@ -162,8 +161,7 @@ both the FVSes and source nodes
 .. image:: _static/fcwsn.PNG
 
 
-We now have identified the nine source nodes in the network
-   Ctnnb, Gata.a, Gdf1/3-r, Hes.a, Pem1, Sox4/11/12, Tp53.a,Tp53.b, Zic-r.a
+We now have identified the nine source nodes in the network: Ctnnb, Gata.a, Gdf1/3-r, Hes.a, Pem1, Sox4/11/12, Tp53.a,Tp53.b, Zic-r.a
 
 ....................................................................
 Identifying CIs with OCSANA
@@ -180,7 +178,7 @@ In the OCSANA panel in the Cytoscape Control Panel:
 3. Enter the nine source nodes in the source nodes box
 4. Enter Epi1 in the target nodes box
 5. We have set to discover all non-self intersecting paths with a length limit of 20 nodes from source to target. This setting can be changed to suit your network needs and size
-6. To configure CI discovery we have chosen the MMCS algorithm. We will check "allow sources in CIs" so that source nodes can be considered in CIs. We will not bind the number of threads. We will bind CI size at 6 nodes.
+6. To configure CI discovery we have chosen the RS algorithm. We will check "allow sources in CIs" so that source nodes can be considered in CIs. We will not bind the number of threads. We will bind CI size at 6 nodes.
 
 After configuration, click "Run OCSANA analysis"
 

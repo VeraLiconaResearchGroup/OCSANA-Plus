@@ -3,11 +3,11 @@ Performing Topological Estimation of Signal Flow with Signal Flow Analysis (SFA)
 =====
 
 The SFA algorithm (`Lee and Cho, 2018 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5869720/>`_) estimates the steady state activity 
-of a node by a linear differenceequation that considers:
+of a node by a linear difference equation that considers:
 
-1. the activity of a 
-2. the effect and influence of incoming edges to 
-3. the initial activities of the node. 
+1. The activity of a node at the previous time step
+2. The effect (activating or inhibiting) and influence of incoming edges to a node
+3. The initial activities of the node 
 
 -----------------------------
 Running SFA in Cytoscape
@@ -63,7 +63,7 @@ of target nodes button.
 Edge Sign Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To Configure edge signs, please include an "interaction" column that specifies positive edges as "activates"
+To configure edge signs, please include an "interaction" column in the network table that specifies positive edges as "activates"
 and negative edges as "inhibits." Otherwise, all edges will be considered positive. 
 
 
@@ -75,14 +75,14 @@ SFA Results
 -----------------------------
 
 
-After the SFA run has completed, the results will be displayed in the OCSANA tabe of the 
+After the SFA run has completed, the results will be displayed in the SFA subpanel of the 
 Cytoscape Results Panel (right panel)
 
 ++++++++++++++++++++++++++++
 SFA Config
 ++++++++++++++++++++++++++++
 
-This subpanel displays the configuration set for this run (activated nodes, 
+This subpanel displays the configuration set for this run (activated nodes 
 and inhibited nodes)
 
 .. image:: _static/sfaresults_config.PNG

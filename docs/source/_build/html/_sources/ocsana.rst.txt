@@ -30,42 +30,24 @@ Configure Network Processing (pink panel)
 This subpanel allows users to select how OCSANA processes your network (which columns to read for node names)
 and which nodes to build paths from (source nodes to targets, source nodes to off-targets).
 
-....................
-Node Selection Mode
-....................
 
-Select whether you will enter a string of source, target, and off target nodes, 
+**Node Selection Mode:** Select whether you will enter a string of source, target, and off target nodes, 
 or will click-to-select the nodes. 
 
-........................
-Select Node Name Column
-........................
-
-This option allows users to select which column of the node 
+**Select Node Name Column**: This option allows users to select which column of the node 
 attribute table will be used to identify network nodes.
 
-........................
-Source Nodes
-........................
-
-The Source nodes section allows the user to specify the source nodes (i.e. the nodes from
+**Source Nodes**: The Source nodes section allows the user to specify the source nodes (i.e. the nodes from
 which the signals’ cascades will start). The nodes can be selected manually from the list of
 nodes appearing in this section or by copying and pasting the list of desired nodes in the
 dialog window after clicking on the set source nodes button.
 
-........................
-Target Nodes
-........................
-
-The Target nodessection allows the user to select the target nodes (i.e. the nodes intended to
+**Target Nodes**: The Target nodes section allows the user to select the target nodes (i.e. the nodes intended to
 be blocked). The nodes can be selected manually from the list of nodes appearing in this
 section or by copying and pasting a list of nodes in the dialog window after clicking on the set
 of target nodes button.
 
-........................
-Off-target Nodes
-........................
-The off-target nodes section is an optional column for the user that allows to select offtarget (side-effect) nodes, that is, nodes that are preferred to be avoided when constructing CIs. A CI that
+**Off-target Nodes**: The off-target nodes section is an optional column for the user that allows to select offtarget (side-effect) nodes, that is, nodes that are preferred to be avoided when constructing CIs. A CI that
 contains a node from such given list, will then receive a penalty. The nodes can be selected
 manually from the list of nodes appearing in this column or by copying and pasting the list of
 nodes in the dialog window after clicking on the set side-effects nodes button.
@@ -74,7 +56,7 @@ nodes in the dialog window after clicking on the set side-effects nodes button.
 Configuring Edge Sign (purple panel)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To Configure edge signs, please include an "interaction" column that specifies positive edges as "activates"
+To configure edge signs, please include an "interaction" column in your network table that specifies positive edges as "activates"
 and negative edges as "inhibits." Otherwise, all edges will be considered positive. 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -83,19 +65,12 @@ Configure Path Finding (blue panel)
 
 This panel allows users to select which algorithm should be used for finding paths between source nodes and target/off-target nodes.
 
-.........................
-Shortest Paths
-.........................
 
-searches for the paths with the shortest length among all the elementary paths
+**Shortest Paths**: searches for the paths with the shortest length among all the elementary paths
 connecting source nodes to target nodes and source nodes to side-effect nodes (via Dijkstra’s
 algorithm).
 
-................................
-All Non-Self-intersecting paths
-................................
-
-considers all the paths, between specified nodes, that do not
+**All Non-Self-intersecting paths**: considers all the paths, between specified nodes, that do not
 contain loops (self-intersections). 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -124,25 +99,13 @@ The algorithms included are:
 If you are interested in descriptions of these algorithms, please see 
 the `\OCSANA+ supplementary file` or `Gainer-Dewar and Vera-Licona, 2017 <https://epubs.siam.org/doi/abs/10.1137/15M1055024>`_. 
 
-.........................
-Allow sources in CIs
-.........................
+**Allow sources in CIs**: Select this option if you would like source nodes to be considered in CIs
 
-Select this option if you would like source nodes to be considered in CIs
-
-.........................
-Bound thread count
-.........................
-
-Select this option if you would like to bind the number of threads used to CI Discovery
+**Bound thread count**: Select this option if you would like to bind the number of threads used to CI Discovery
 if selected, enter the number of threads to be used in the below box (min:1,max:16)
 
 
-........................
-Bound CI size
-........................
-
-Select this option if you would like to bind the number of nodes that can be in a CI
+**Bound CI size**: Select this option if you would like to bind the number of nodes that can be in a CI
 if selected, enter the max CI size in the below box (min:1,max:20)
 
 ...............................................................
@@ -157,11 +120,14 @@ If selected, enter the number below. Note this is converted to millions (if you 
 
 After configuring your OCSANA Run, click 'Run OCSANA Calculations'
 
+
+
+
 -----------------------------
 OCSANA Results
 -----------------------------
 
-After the OCSANA run has completed, the results will be displayed in the OCSANA tabe of the 
+After the OCSANA run has completed, the results will be displayed in the OCSANA subpanel of the 
 Cytoscape Results Panel (right panel)
 
 ++++++++++++++++++++++++++++

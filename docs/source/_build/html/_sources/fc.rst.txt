@@ -58,7 +58,7 @@ After configuring your run, select "Identify Feedback Vertex Set Control Set"
 FC Results
 -----------------------------
 
-After the OCSANA run has completed, the results will be displayed in the OCSANA tabe of the 
+After the OCSANA run has completed, the results will be displayed in the FC subpanel of the 
 Cytoscape Results Panel (right panel).
 
 

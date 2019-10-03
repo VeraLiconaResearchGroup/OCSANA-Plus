@@ -171,11 +171,11 @@
   <div class="section" id="performing-topological-estimation-of-signal-flow-with-signal-flow-analysis-sfa">
 <h1>Performing Topological Estimation of Signal Flow with Signal Flow Analysis (SFA)<a class="headerlink" href="#performing-topological-estimation-of-signal-flow-with-signal-flow-analysis-sfa" title="Permalink to this headline">¶</a></h1>
 <p>The SFA algorithm (<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5869720/">Lee and Cho, 2018</a>) estimates the steady state activity
-of a node by a linear differenceequation that considers:</p>
+of a node by a linear difference equation that considers:</p>
 <ol class="arabic simple">
-<li>the activity of a</li>
-<li>the effect and influence of incoming edges to</li>
-<li>the initial activities of the node.</li>
+<li>The activity of a node at the previous time step</li>
+<li>The effect (activating or inhibiting) and influence of incoming edges to a node</li>
+<li>The initial activities of the node</li>
 </ol>
 <div class="section" id="running-sfa-in-cytoscape">
 <h2>Running SFA in Cytoscape<a class="headerlink" href="#running-sfa-in-cytoscape" title="Permalink to this headline">¶</a></h2>
@@ -210,7 +210,7 @@ section or by copying and pasting a list of nodes in the dialog window after cli
 of target nodes button.</p>
 <div class="section" id="edge-sign-configuration">
 <h5>Edge Sign Configuration<a class="headerlink" href="#edge-sign-configuration" title="Permalink to this headline">¶</a></h5>
-<p>To Configure edge signs, please include an “interaction” column that specifies positive edges as “activates”
+<p>To configure edge signs, please include an “interaction” column in the network table that specifies positive edges as “activates”
 and negative edges as “inhibits.” Otherwise, all edges will be considered positive.</p>
 <p>After you have configured your run, click “Run Signal Flow Analysis”</p>
 </div>
@@ -219,11 +219,11 @@ and negative edges as “inhibits.” Otherwise, all edges will be considered po
 </div>
 <div class="section" id="sfa-results">
 <h2>SFA Results<a class="headerlink" href="#sfa-results" title="Permalink to this headline">¶</a></h2>
-<p>After the SFA run has completed, the results will be displayed in the OCSANA tabe of the
+<p>After the SFA run has completed, the results will be displayed in the SFA subpanel of the
 Cytoscape Results Panel (right panel)</p>
 <div class="section" id="sfa-config">
 <h3>SFA Config<a class="headerlink" href="#sfa-config" title="Permalink to this headline">¶</a></h3>
-<p>This subpanel displays the configuration set for this run (activated nodes,
+<p>This subpanel displays the configuration set for this run (activated nodes
 and inhibited nodes)</p>
 <img alt="_images/sfaresults_config.PNG" src="_images/sfaresults_config.PNG" />
 </div>
