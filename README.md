@@ -1,5 +1,3 @@
-# AlgoRun Website
-
 
 ## Install Dependencies
 
