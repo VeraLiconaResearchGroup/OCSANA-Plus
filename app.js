@@ -1,7 +1,7 @@
 var express = require('express')
   , app = express()
   , doT = require('express-dot')
-  , pub = __dirname
+  , pub = __dirname+'/public'
   , view = __dirname+'/views';
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
@@ -59,7 +59,14 @@ app.get('/publications', function (req, res) {
 	res.render('publications.html', templateData);
 });
 
-
+app.get('/submit-algorithm', function (req, res) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.status = 200;
+    
+    var templateData = {title: "Submit Algorithm", submit_tab: "class='active'"};
+	res.render('submit-algorithm.html', templateData);
+});
 
 app.get('/contact-us', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -70,7 +77,14 @@ app.get('/contact-us', function (req, res) {
 	res.render('contact-us.html', templateData);
 });
 
-
+app.get('/input-output-types', function (req, res) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.status = 200;
+    
+    var templateData = {title: "Input & Output Types"};
+	res.render('input-output-types.html', templateData);
+});
 
 var server = app.listen(31331);
 enableDestroy(server);

@@ -1,27 +1,22 @@
 {
-  "name": "OCSANA-Plus",
+  "name": "OCSANA+-Website",
   "version": "1.0.0",
   "description": "OCSANA+ website",
   "main": "app.js",
-  "homepage":"https://veraliconaresearchgroup.github.io/OCSANA-Plus/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-    "predeploy": "npm run build",
-    "deploy":"gh-pages -d build"
   },
   "author": "Lauren Marazzi",
   "dependencies": {
-    "body-parser": "1.14.2",
-    "cookie-parser": "1.4.1",
-    "express": "^4.13.1",
-    "express-dot": "0.1.0",
-    "gh-pages": "^2.1.1",
-    "multer": "1.1.0",
-    "node-uuid": "1.4.7",
+    "express": "4.13.1",
     "path": "0.12.7",
+    "express-dot": "0.1.0",
+    "cookie-parser": "1.4.1",
+    "body-parser": "1.14.2",
+    "multer": "1.1.0",
     "request": "2.69.0",
-    "gh-pages":^1.1.0
+    "node-uuid": "1.4.7"
   },
-  "repository": "https://github.com/VeraLiconaResearchGroup/OCSANA-Plus",
+  "repository": "https://github.com/VeraLiconaResearchGroup/OCSANA_Plus",
   "license": "SEE LICENSE IN LICENSE file"
 }
