@@ -1,7 +1,7 @@
 var express = require('express')
   , app = express()
   , doT = require('express-dot')
-  , pub = __dirname+'/public'
+  , pub = __dirname
   , view = __dirname+'/views';
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
