@@ -2,8 +2,12 @@ var express = require('express')
   , app = express()
   , doT = require('express-dot')
   , pub = __dirname+'/public'
+<<<<<<< HEAD
   , //view = __dirname+'/views';
     view='./';
+=======
+  , view = __dirname+'/views';
+>>>>>>> parent of d809e92... attempt2 static website
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var multer = require('multer');
