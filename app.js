@@ -2,7 +2,8 @@ var express = require('express')
   , app = express()
   , doT = require('express-dot')
   , pub = __dirname+'/public'
-  , view = __dirname+'/views';
+  , //view = __dirname+'/views';
+    view='./';
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var multer = require('multer');
@@ -10,7 +11,8 @@ var upload = multer();
 var uuid = require('node-uuid');
 var request = require('request');
 
-app.set('views', __dirname+'/views');
+//app.set('views', __dirname+'/views');
+app.set('views','./' )
 app.set('view engine', 'dot');
 app.engine('html', doT.__express);
 // app.use(cookieParser('AlgoPiper'));
