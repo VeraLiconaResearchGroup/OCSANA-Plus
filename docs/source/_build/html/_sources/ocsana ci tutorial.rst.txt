@@ -1,3 +1,0 @@
-=======
- Computing Optimal Combinations of Intervention with OCSANA
-=======
