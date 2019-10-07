@@ -1,5 +1,5 @@
 {
-  "name": "OCSANA+-Website",
+  "name": "OCSANAplusWebsite",
   "version": "1.0.0",
   "description": "OCSANA+ website",
   "main": "app.js",
@@ -8,15 +8,16 @@
   },
   "author": "Lauren Marazzi",
   "dependencies": {
-    "express": "4.13.1",
-    "path": "0.12.7",
-    "express-dot": "0.1.0",
-    "cookie-parser": "1.4.1",
     "body-parser": "1.14.2",
+    "cookie-parser": "1.4.1",
+    "express": "^4.17.1",
+    "express-dot": "^0.1.0",
     "multer": "1.1.0",
-    "request": "2.69.0",
-    "node-uuid": "1.4.7"
+    "node-uuid": "1.4.7",
+    "npm": "^6.11.3",
+    "path": "0.12.7",
+    "request": "2.69.0"
   },
-  "repository": "https://github.com/VeraLiconaResearchGroup/OCSANA_Plus",
+  "repository": "https://github.com/VeraLiconaResearchGroup/OCSANA-Plus",
   "license": "SEE LICENSE IN LICENSE file"
 }

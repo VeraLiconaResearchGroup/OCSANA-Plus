@@ -13,7 +13,7 @@ var request = require('request');
 app.set('views', __dirname+'/views');
 app.set('view engine', 'dot');
 app.engine('html', doT.__express);
-app.use(cookieParser('AlgoPiper'));
+// app.use(cookieParser('AlgoPiper'));
 app.use(bodyParser.json({limit: '10mb'}));
 app.use(bodyParser.urlencoded({limit: '10mb', extended: true}));
 app.use(bodyParser.urlencoded({ extended: true }));
