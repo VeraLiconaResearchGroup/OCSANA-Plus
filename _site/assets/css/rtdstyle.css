@@ -243,7 +243,7 @@ Full-Width Styles
 
 #main_content_wrap { background:url("../../img/page-background.png"); /* border-top: 1px solid #111; */box-shadow:  inset 0px 7px 3px -3px #99AEBB;}
 
-#main_content { padding-top: 40px; height: 1024px; max-width:40000px; padding:0,0,0,0;}
+#main_content { padding-top: 40px; height: 1024px; max-width:40000px; padding:0,0,0,0; zoom: 0.75}
 
 #footer_wrap { bottom: 0; background: #ffffff; max-height: 20px;}
 
