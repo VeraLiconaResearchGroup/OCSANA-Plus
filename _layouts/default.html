@@ -11,7 +11,14 @@
   </head>
 
   <body>
-
+    <div id="toolbar_wrap" class="outer">
+      <section id="toolbar" class="inner">
+          <a id="index_banner" href="index">Home</a>
+          <a id="docs_banner" href="documentation">Documentation</a>
+          <a id="pubs_banner" href="publications">Publications</a>
+          <a id="home_banner" href="https://veraliconaresearchgroup.github.io">Vera-Licona Research Group</a>
+      </section>
+    </div>
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner"> 
@@ -27,14 +34,7 @@
         </header>
     </div>
    
-    <div id="toolbar_wrap" class="outer">
-        <section id="toolbar" class="inner">
-            <a id="index_banner" href="index">Home</a>
-            <a id="docs_banner" href="documentation">Documentation</a>
-            <a id="pubs_banner" href="publications">Publications</a>
-            <a id="home_banner" href="https://veraliconaresearchgroup.github.io">Vera-Licona Research Group</a>
-        </section>
-      </div>
+    
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
@@ -47,7 +47,7 @@
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         {% if site.github.is_project_page %}
-        <p class="copyright">{{ site.title | default: site.github.repository_name }} is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        <p class="copyright">{{ site.title | default: site.github.repository_name }} is maintained by <a href="https://veraliconaresearchgroup.github.io">{{ site.github.owner_name }}</a></p>
         {% endif %}
         <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
