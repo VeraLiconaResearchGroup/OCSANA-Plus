@@ -211,7 +211,7 @@ Full-Width Styles
 *******************************************************************************/
 .outer { width: 100%; }
 
-.inner { position: relative; height: auto; max-width: 50%; padding: 0px 400px 50px; margin:10 ; }
+.inner { position: relative; height: auto; max-width: 120%; padding: 0px 400px 50px; margin:10 ; }
 
 #index_banner { display: block; position: absolute; top: 52%; right: 70%; z-index: 10; padding: 0px 0px 0px 0px; color: #364954; /*background: /* url("../images/blacktocat.png") #69d4f2 no-repeat 95% 50%;*/ font-size: 20px; font-weight: 700; box-shadow: 0 0 0px #00000000; border-bottom-left-radius: 2 px; border-bottom-right-radius: 2px; }
 
