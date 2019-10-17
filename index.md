@@ -7,7 +7,7 @@ layout: default
 
 # What is OCSANA+?
 
-OCSANA+ is a Cytoscape app for identifying potential driver nodes, prioritizing combinations ofinterventions, and simulating the effects of node perturbations in biological networks. OCSANA+ includes an update to OCSANA (optimal combinations of interventions from network analysis),  structure-based controllability algorithms for non-linear systems and an algorithm for estimating the signal flow through anetwork based on the network’s topology. OCSANA+ provides researchers a tool to identify and simulate perturbations to key molecular targets within large scale complex signaling network.
+OCSANA+ is a Cytoscape app for identifying driver nodes that control non-linear systems' long-term dynamics, prioritizing combinations of interventions in large scale complex networks, and estimating the effects of node perturbations in signaling networks, all based on the analysis of the network's structure. OCSANA+ includes an update to the previously introduced OCSANA (optimal combinations of interventions from network analysis) software tool with cutting-edge and rigorously tested algorithms, together with recently-developed structure-based control algorithms for non-linear systems and an algorithm for estimating the signal flow. All these algorithms are based on the network's topology. OCSANA+ is implemented as a Cytoscape app to enable a straightforward user interface for running analyses and visualizing results. 
 
 # Download OCSANA+
 
