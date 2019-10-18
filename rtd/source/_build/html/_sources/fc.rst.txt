@@ -1,11 +1,9 @@
-======
+==========================================================
 Identifying Minimal Feedback Vertex Set Control (FC) Sets
-======
+==========================================================
 
-FeedbackVertex Set Control (FC)
-is an attractor based control method 
-specifically developed for networks with non-linear 
-dynamics that uses a component ofthe network’s topology, 
+Feedback Vertex Set Control (FC) is an attractor based control method 
+specifically developed for networks with non-linear dynamics that uses a component of the network's topology, 
 the Feedback Vertex Set (FVS) (`\Mochizuki et al., 2013 <https://www.ncbi.nlm.nih.gov/pubmed/23774067>`_)
 
 -----------------------------

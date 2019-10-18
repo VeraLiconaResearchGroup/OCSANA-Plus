@@ -1,7 +1,7 @@
 =====================
 Installing OCSANA+
 =====================
-The OCSANA+ jar file can be downloaded from the OCSANA+ `\github repository <https://github.com/VeraLiconaResearchGroup/OCSANA_Plus/tree/master/OCSANA_Plus/target>`_
+The OCSANA+ jar file can be downloaded from the OCSANA+ `\github repository <https://github.com/VeraLiconaResearchGroup/OCSANA-Plus_SourceCode/tree/master/OCSANA_Plus/target>`_
 
 
 To install apps within Cytoscape, go to the menu bar and choose **Apps →

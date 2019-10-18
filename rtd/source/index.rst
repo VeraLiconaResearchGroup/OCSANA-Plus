@@ -8,7 +8,9 @@ of interventions from network analysis) software tool with cutting-edge and rigo
 together with recently-developed structure-based control algorithms for non-linear systems and an algorithm 
 for estimating the signal flow. All these algorithms are based on the network's topology.
 
+++++++++++++++++++
 OCSANA+ features:
+++++++++++++++++++
 
 **OCSANA (Optimal Combinations of Interventions from Network Analysis)**, 
 originally introduced in Vera-Licona et al., 2013, identifies and prioritizes 
@@ -29,7 +31,8 @@ of a node by a linear difference equation that considers (i) The activity of a n
 initial activities of the node
 
 
-In this manual we include a walkthrough tutorial of the features of OCSANA+
+In this manual we include instructions for intallation, CI discovery, FC identification,
+ SFA analysis, and a walkthrough tutorial of the features of OCSANA+.
 
 .. toctree::
    :caption: User Guide

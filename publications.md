@@ -15,17 +15,22 @@ Paola Vera-Licona, Eric Bonnet, Emmanuel Barillot, Andrei Zinovyev. Bioinformati
 
 **Control of Intracellular Molecular Networks Using Algebraic Methods** <br/>
 Luis Sordo Vieira, Reinhard C. Laubenbacher, David Murrugarra
-bioRxiv 682989; doi: https://doi.org/10.1101/682989
+bioRxiv 682989; doi: [https://doi.org/10.1101/682989](https://doi.org/10.1101/682989)
 
+**Quantifying Side Effects in Multistate Discrete Networks** David Murrugarra and Elena Dimitrova.arxiv,2019. [https://arxiv.org/abs/1906.09465](https://arxiv.org/abs/1906.09465)
 
 **The Phosphatase PRL-3 Is Involved in Key Steps of Cancer Metastasis**<br/>
-
+Laura Duciel, Luis Cristobal Monraz Gomez et al. Journal of molecular biology, 431, 17, 8 2019. [https://www.sciencedirect.com/science/article/pii/S0022283619303705?via%3Dihub](https://www.sciencedirect.com/science/article/pii/S0022283619303705?via%3Dihub)
 
 **Understanding the Effectiveness of Data Reduction in Public Transportation Networks**<br/>
 Bläsius, Thomas and Fischbeck, Philipp and Friedrich, Tobias and Schirneck, Martin. Algorithms and Models for the Web Graph,2019 [http://dx.doi.org/10.1007/978-3-030-25070-6_7](http://dx.doi.org/10.1007/978-3-030-25070-6_7)
 
 **A Boolean network control algorithm guided by forward dynamic programming** <br/>
 Moradi M, Goliaei S, Foroughmand-Araabi M-H (2019) . PLoS ONE 14(5): e0215449. https://doi.org/10.1371/journal.pone.0215449
+
+**Computing Signal Transduction in Signaling Networks modeled as Boolean Networks, Petri Nets, and Hypergraphs**
+Luis Sordo Vieira, Paola Vera-Licona
+bioRxiv 272344; doi: [https://doi.org/10.1101/272344](https://doi.org/10.1101/272344)
 
 **Macrophage mediated recognition and clearance of Borrelia burgdorferinelicits MyD88-dependent and -independent phagosomal signals that contribute to phagocytosis and inflammation**<br/>
 Sarah J. Benjamin, Kelly L. Hawley, Paola Vera-Licona, Carson J. La Vake, Jorge L. Cervantes, Rachel Burns, Oscar Luo, Yijun Ruan, Melissa J. Caimano, Justin D. Radolf, Juan C. Salazar. bioRxiv 593566; [https://doi.org/10.1101/593566](https://doi.org/10.1101/593566)
