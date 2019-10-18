@@ -1,6 +1,6 @@
-=====
+==================================================================================
 Performing Topological Estimation of Signal Flow with Signal Flow Analysis (SFA)
-=====
+==================================================================================
 
 The SFA algorithm (`Lee and Cho, 2018 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5869720/>`_) estimates the steady state activity 
 of a node by a linear difference equation that considers:
