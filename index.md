@@ -11,4 +11,9 @@ OCSANA+ is a Cytoscape app for identifying driver nodes that control non-linear 
 
 # Download OCSANA+
 
-OCSANA+ can be downloaded from [the OCSANA+ Github Repository](https://github.com/VeraLiconaResearchGroup/OCSANA-Plus_SourceCode/tree/master/OCSANA_Plus/target) or directly [here](https://github.com/VeraLiconaResearchGroup/OCSANA-Plus_SourceCode/raw/master/OCSANA_Plus/target/OCSANA-0.1-SNAPSHOT.jar).
+OCSANA+ can be downloaded from
+[The Cytoscape App store](http://apps.cytoscape.org/apps/ocsana),
+
+[the OCSANA+ Github Repository](https://github.com/VeraLiconaResearchGroup/OCSANA-Plus_SourceCode/tree/master/OCSANA_Plus/target),
+
+or directly [here](https://github.com/VeraLiconaResearchGroup/OCSANA-Plus_SourceCode/raw/master/OCSANA_Plus/target/OCSANA-0.1-SNAPSHOT.jar).
