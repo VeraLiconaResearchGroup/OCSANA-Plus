@@ -12,7 +12,8 @@ for estimating the signal flow. All these algorithms are based on the network's 
 OCSANA+ features:
 ++++++++++++++++++
 
-**OCSANA (Optimal Combinations of Interventions from Network Analysis)**, 
+**Optimal Combinations of Interventions**
+OCSANA (Optimal Combinations of Interventions from Network Analysis), 
 originally introduced in Vera-Licona et al., 2013, identifies and prioritizes 
 optimal minimal combinations of interventions (CIs) that disrupt the elementary 
 paths from selected source nodes to the specified target nodes. When indicated by the user, 
@@ -32,7 +33,7 @@ initial activities of the node
 
 
 In this manual we include instructions for intallation, CI discovery, FC identification,
- SFA analysis, and a walkthrough tutorial of the features of OCSANA+.
+SFA analysis, and a walkthrough tutorial of the features of OCSANA+.
 
 .. toctree::
    :caption: User Guide
