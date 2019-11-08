@@ -23,7 +23,9 @@ OCSANA seeks to additionally minimize the side-effects that CIs can cause on spe
 Feedback Vertex Set Control (FC) is an attractor 
 based control method specifically developed for networks 
 with non-linear dynamics that uses a component of the network's 
-topology, the Feedback Vertex Set (FVS) (Mochizuki et al., 2013 )
+topology, the Feedback Vertex Set (FVS) (Mochizuki et al., 2013 )The FVS of a network is defined as the 
+minimal set of nodes whose removal would leave a graph without cycles. 
+Later, an extended FC control version adding the the network’s source nodes was proposed by Zanudo et al., 2017.
 
 **Signal Flow Analysis**
 The SFA algorithm (Lee and Cho, 2018) estimates the steady state activity 
