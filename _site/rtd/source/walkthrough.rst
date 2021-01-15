@@ -16,7 +16,7 @@ Additionally, we explore how the extended Feedback Vertex Set Control (FC) with 
 nodes (`Zanudo et al., 2017 <https://www.ncbi.nlm.nih.gov/pubmed/28655847>`_) and OCSANA functionalities could increase 
 the accuracy of simulated results.
 
-For the full results of this example, please see `OCSANA+supplementary file`_
+For the full results of this example, please see the OCSANA+supplementary files
 
 You can download the .sif file used in this tutorial `here <_static/files/kobayashi.sif>`_
 
