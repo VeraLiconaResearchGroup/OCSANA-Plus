@@ -7,6 +7,8 @@ layout: default
 **OCSANA+: Optimal Control and Simulation of Signaling Networks from Network Analysis** <br/>
 Lauren Marazzi, Andrew Gainer-Dewar, Paola Vera-Licona. Bioinformatics, Volume 36, Issue 19, 1 October 2020, Pages 4960–4962, [https://doi.org/10.1093/bioinformatics/btaa625](https://doi.org/10.1093/bioinformatics/btaa625)
 
+preprint found at biorxiv: [https://doi.org/10.1101/806315](https://doi.org/10.1101/806315)
+
 **OCSANA: optimal combinations of interventions from network analysis**<br/>
 Paola Vera-Licona, Eric Bonnet, Emmanuel Barillot, Andrei Zinovyev. Bioinformatics, Volume 29, Issue 12, 15 June 2013, Pages 1571–1573, [https://doi.org/10.1093/bioinformatics/btt195](https://doi.org/10.1093/bioinformatics/btt195)
 
